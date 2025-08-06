@@ -222,7 +222,7 @@ export default function PortfolioPageRedesigned() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
-            {filteredItems.map((item, index) => (
+            {filteredItems.map((item, _index) => (
               <div
                 key={item.id}
                 className={`group relative break-inside-avoid rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 cursor-pointer`}
