@@ -393,7 +393,7 @@ export default function PortfolioPageRedesigned() {
             Ready to Create Your Own Success Story?
           </h2>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            Let's discuss your vision and create an unforgettable experience that will be remembered for years to come.
+            Let&apos;s discuss your vision and create an unforgettable experience that will be remembered for years to come.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

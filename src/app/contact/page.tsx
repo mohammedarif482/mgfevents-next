@@ -142,7 +142,7 @@ export default function ContactPageRedesigned() {
             Contact Us
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-            Ready to plan your dream event? Get in touch with our team and let's start creating something extraordinary together
+            Ready to plan your dream event? Get in touch with our team and let&apos;s start creating something extraordinary together
           </p>
         </div>
       </section>
@@ -186,7 +186,7 @@ export default function ContactPageRedesigned() {
                     <svg className="w-5 h-5 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <p className="text-green-800 font-medium">Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.</p>
+                    <p className="text-green-800 font-medium">Thank you! Your message has been sent successfully. We&apos;ll get back to you within 24 hours.</p>
                   </div>
                 </div>
               )}
