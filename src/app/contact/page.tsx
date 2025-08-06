@@ -114,9 +114,9 @@ export default function ContactPage() {
         location: '',
         message: ''
       });
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
+} catch (_error) {
+    setSubmitStatus('error');
+} finally {
       setIsSubmitting(false);
     }
   };

@@ -1,10 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Metadata } from 'next';
+// import { Metadata } from 'next';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
-import Image from 'next/image';
+// import Image from 'next/image';
 import Link from 'next/link';
 
 const portfolioCategories = [
@@ -169,7 +169,7 @@ export default function PortfolioPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredItems.map((item, index) => (
+            {filteredItems.map((item, _index) => (
               <div
                 key={item.id}
                 className="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2"
