@@ -40,7 +40,7 @@ export default function Contact() {
         budget: '',
         message: '',
       });
-    } catch (error) {
+} catch {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -69,7 +69,7 @@ export default function Contact() {
           </div>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 font-serif">
             Got a wedding in the works?<br />
-            <span className="text-primary-400">Let's make some magic happen!</span>
+            <span className="text-primary-400">Let&apos;s make some magic happen!</span>
           </h2>
         </div>
 
@@ -86,7 +86,7 @@ export default function Contact() {
               
               {submitStatus === 'success' && (
                 <div className="mb-6 p-4 bg-green-100 border border-green-300 rounded-lg">
-                  <p className="text-green-700">Thank you! We'll get back to you within 24 hours.</p>
+                  <p className="text-green-700">Thank you! We&apos;ll get back to you within 24 hours.</p>
                 </div>
               )}
               

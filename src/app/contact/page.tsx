@@ -114,7 +114,7 @@ export default function ContactPage() {
         location: '',
         message: ''
       });
-} catch (_error) {
+} catch{
     setSubmitStatus('error');
 } finally {
       setIsSubmitting(false);
@@ -132,7 +132,7 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <p className="text-xl text-primary-100 max-w-3xl mx-auto">
-            Ready to plan your dream event? Get in touch with our team and let's start creating something extraordinary together
+            Ready to plan your dream event? Get in touch with our team and let&apos;s start creating something extraordinary together
           </p>
         </div>
       </section>
@@ -172,7 +172,7 @@ export default function ContactPage() {
               
               {submitStatus === 'success' && (
                 <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-                  <p className="text-green-800">Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.</p>
+                  <p className="text-green-800">Thank you! Your message has been sent successfully. We&apos;ll get back to you within 24 hours.</p>
                 </div>
               )}
 
@@ -514,7 +514,7 @@ export default function ContactPage() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-6 font-serif">Visit Our Office</h2>
             <p className="text-xl text-gray-600">
-              Located in the heart of Kochi, we're easily accessible for consultations and meetings
+              Located in the heart of Kochi, we&apos;re easily accessible for consultations and meetings
             </p>
           </div>
 
@@ -555,7 +555,7 @@ export default function ContactPage() {
               <div className="bg-white rounded-3xl p-6 shadow-lg">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Directions</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  We're located in the prime business district of Kochi, easily accessible by public transport and with ample parking available.
+                  We&apos;re located in the prime business district of Kochi, easily accessible by public transport and with ample parking available.
                 </p>
                 <button className="w-full bg-primary-600 text-white py-3 rounded-lg hover:bg-primary-700 transition-colors font-medium">
                   Get Directions
@@ -583,7 +583,7 @@ export default function ContactPage() {
       <section className="py-20 bg-primary-600">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-white mb-6 font-serif">
-            Let's Make Your Event Unforgettable
+            Let&apos;s Make Your Event Unforgettable
           </h2>
           <p className="text-xl text-primary-100 mb-8">
             Ready to start planning? Our team is excited to hear about your vision and bring it to life.

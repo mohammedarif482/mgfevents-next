@@ -100,10 +100,10 @@ export default function AboutPage() {
               <h2 className="text-4xl font-bold text-gray-900 mb-6 font-serif">Our Story</h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Founded in 2010 by Meera George, MGF Events began as a small dream to create extraordinary celebrations that honor Kerala's rich cultural heritage while embracing modern sophistication. What started as a passion project has grown into one of Kerala's most trusted event management companies.
+                  Founded in 2010 by Meera George, MGF Events began as a small dream to create extraordinary celebrations that honor Kerala&apos;s rich cultural heritage while embracing modern sophistication. What started as a passion project has grown into one of Kerala&apos;s most trusted event management companies.
                 </p>
                 <p>
-                  Our journey has been marked by countless magical moments – from intimate backwater weddings to grand corporate galas. Each event teaches us something new, and every client becomes part of our extended family. We believe that behind every great celebration is a story worth telling, and we're honored to be the storytellers.
+                  Our journey has been marked by countless magical moments – from intimate backwater weddings to grand corporate galas. Each event teaches us something new, and every client becomes part of our extended family. We believe that behind every great celebration is a story worth telling, and we&apos;re honored to be the storytellers.
                 </p>
                 <p>
                   Today, with over 1000 successful events and a team of passionate professionals, we continue to push boundaries, embrace innovation, and create experiences that leave lasting impressions on hearts and minds.
@@ -263,7 +263,7 @@ export default function AboutPage() {
       <section className="py-20 bg-primary-600">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-white mb-6 font-serif">
-            Let's Create Something Amazing Together
+            Let&apos;s Create Something Amazing Together
           </h2>
           <p className="text-xl text-primary-100 mb-8">
             Ready to turn your vision into reality? Our team is here to make your event extraordinary.

@@ -18,7 +18,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-300 leading-relaxed mb-6 max-w-md">
-              MGF Events is Kerala's premier event management company, specializing in 
+              MGF Events is Kerala&apos;s premier event management company, specializing in 
               weddings, corporate events, and celebrations. We turn your vision into 
               reality with creative planning and flawless execution.
             </p>

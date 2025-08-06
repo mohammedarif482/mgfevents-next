@@ -144,7 +144,7 @@ export default function ServicesPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {services.map((service, index) => (
+            {services.map((service, _index) => (
               <div key={service.id} className="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
                 {/* Header */}
                 <div className={`h-32 bg-gradient-to-r ${service.color} flex items-center justify-center`}>
@@ -159,7 +159,7 @@ export default function ServicesPage() {
                   
                   {/* Features */}
                   <div className="mb-6">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4">What's Included:</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4">What&apos;s Included:</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {service.features.map((feature, idx) => (
                         <div key={idx} className="flex items-center text-sm text-gray-600">
@@ -196,7 +196,7 @@ export default function ServicesPage() {
             Ready to Plan Your Perfect Event?
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            Let's discuss your vision and create an unforgettable experience together.
+            Let&apos;s discuss your vision and create an unforgettable experience together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

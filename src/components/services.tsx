@@ -98,7 +98,7 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
 
@@ -290,7 +290,7 @@ export default function Services() {
               Got an event in the works?
             </h3>
             <p className="text-xl mb-8 opacity-90">
-              Let's make some magic happen!
+              Let&apos;s make some magic happen!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { useInView } from 'react-intersection-observer';
 
 const testimonials = [
@@ -170,7 +170,7 @@ export default function Testimonials() {
 
                 {/* Quote */}
                 <blockquote className="text-xl md:text-2xl text-gray-700 leading-relaxed font-medium mb-6">
-                  "{testimonials[currentTestimonial].content}"
+                  &quot;{testimonials[currentTestimonial].content}&quot;
                 </blockquote>
 
                 {/* Author Attribution */}
