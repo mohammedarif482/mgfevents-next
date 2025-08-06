@@ -1,3 +1,4 @@
+/* layout.tsx */
 import type { Metadata } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
 import { generateOrganizationLD } from '@/lib/seo'

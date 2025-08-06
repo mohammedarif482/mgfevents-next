@@ -1,8 +1,7 @@
+/* components/portfolio-redesigned.tsx */
 'use client';
 
 import { useState, useEffect } from 'react';
-// import Image from 'next/image';
-import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
 
 const portfolioCategories = [
@@ -18,74 +17,109 @@ const portfolioItems = [
     id: 1,
     title: 'Priya & Arjun Wedding',
     category: 'weddings',
-    image: '/images/portfolio-wedding-1.jpg',
+    image: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&h=1200&fit=crop&crop=faces',
     location: 'Backwater Resort, Kumarakom',
     date: '2024',
-    description: 'A magical waterside wedding celebrating love with traditional Kerala customs.',
+    description: 'A magical waterside wedding celebrating love with traditional Kerala customs. The ceremony was held during sunset with traditional Kerala music and dance performances.',
     client: 'Priya & Arjun',
-    color: 'from-pink-500/20 to-rose-500/20'
+    height: 'h-80'
   },
   {
     id: 2,
     title: 'Tech Summit 2024',
     category: 'corporate',
-    image: '/images/portfolio-corporate-1.jpg',
+    image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=1200&fit=crop&crop=faces',
     location: 'Crowne Plaza, Kochi',
     date: '2024',
-    description: 'A three-day technology conference with 500+ attendees from across India.',
+    description: 'A three-day technology conference with 500+ attendees from across India. Featured keynote speakers, networking sessions, and product demonstrations.',
     client: 'TechCorp India',
-    color: 'from-blue-500/20 to-indigo-500/20'
+    height: 'h-96'
   },
   {
     id: 3,
     title: 'Golden Anniversary',
     category: 'celebrations',
-    image: '/images/portfolio-celebration-1.jpg',
+    image: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&h=1200&fit=crop&crop=faces',
     location: 'Heritage Villa, Munnar',
     date: '2024',
-    description: 'A heartwarming 50th anniversary celebration in the hills of Munnar.',
+    description: 'A heartwarming 50th anniversary celebration in the hills of Munnar. The event included a renewal of vows ceremony and family gathering.',
     client: 'The Menon Family',
-    color: 'from-amber-500/20 to-orange-500/20'
+    height: 'h-72'
   },
   {
     id: 4,
     title: 'Meera & Vishnu Wedding',
     category: 'weddings',
-    image: '/images/portfolio-wedding-2.jpg',
+    image: 'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=800&h=1200&fit=crop&crop=faces',
     location: 'Bolgatty Palace, Kochi',
     date: '2024',
-    description: 'An elegant palace wedding blending tradition with contemporary style.',
+    description: 'An elegant palace wedding blending tradition with contemporary style. The venue was decorated with jasmine flowers and traditional Kerala lamps.',
     client: 'Meera & Vishnu',
-    color: 'from-purple-500/20 to-violet-500/20'
+    height: 'h-88'
   },
   {
     id: 5,
     title: 'Engagement Ceremony',
     category: 'corporate',
-    image: '/images/portfolio-engagement.jpg',
+    image: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&h=1200&fit=crop&crop=faces',
     location: 'Beach Resort, Kovalam',
     date: '2024',
-    description: 'A romantic beachside engagement with sunset views and intimate setting.',
+    description: 'A romantic beachside engagement with sunset views and intimate setting. The ceremony was followed by a candlelight dinner.',
     client: 'Ananya & Karthik',
-    color: 'from-teal-500/20 to-cyan-500/20'
+    height: 'h-80'
   },
   {
     id: 6,
     title: 'Grand Reception',
     category: 'reception',
-    image: '/images/portfolio-reception.jpg',
+    image: 'https://images.unsplash.com/photo-1519167758481-83f29d8ae8e4?w=800&h=1200&fit=crop&crop=faces',
     location: 'Grand Ballroom, Trivandrum',
     date: '2024',
-    description: 'A lavish reception celebration with traditional performances and modern entertainment.',
+    description: 'A lavish reception celebration with traditional performances and modern entertainment. Featured live music and dance performances.',
     client: 'The Kumar Family',
-    color: 'from-emerald-500/20 to-green-500/20'
+    height: 'h-84'
   },
+  {
+    id: 7,
+    title: 'Corporate Gala Night',
+    category: 'corporate',
+    image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=1200&fit=crop&crop=faces',
+    location: 'Hotel Taj, Kochi',
+    date: '2024',
+    description: 'An elegant corporate gala with live entertainment and networking. The event included awards ceremony and business presentations.',
+    client: 'Innovation Corp',
+    height: 'h-76'
+  },
+  {
+    id: 8,
+    title: 'Haldi Ceremony',
+    category: 'celebrations',
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=1200&fit=crop&crop=faces',
+    location: 'Private Villa, Alleppey',
+    date: '2024',
+    description: 'A colorful haldi ceremony filled with joy, laughter and tradition. The celebration included traditional games and music.',
+    client: 'Kavya & Rohit',
+    height: 'h-80'
+  },
+  {
+    id: 9,
+    title: 'Beach Wedding',
+    category: 'weddings',
+    image: 'https://images.unsplash.com/photo-1522413452208-996ff3f3e740?w=800&h=1200&fit=crop&crop=faces',
+    location: 'Marari Beach Resort',
+    date: '2024',
+    description: 'A dreamy beach wedding with waves as the backdrop. The ceremony was decorated with tropical flowers and bamboo arches.',
+    client: 'Nisha & Arjun',
+    height: 'h-92'
+  }
 ];
 
-export default function Portfolio() {
+export default function PortfolioRedesigned() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [filteredItems, setFilteredItems] = useState(portfolioItems);
   const [hoveredItem, setHoveredItem] = useState<number | null>(null);
+  const [selectedItem, setSelectedItem] = useState<number | null>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
   
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -100,20 +134,60 @@ export default function Portfolio() {
     }
   }, [activeCategory]);
 
+  const openModal = (itemId: number) => {
+    const index = filteredItems.findIndex(item => item.id === itemId);
+    setCurrentIndex(index);
+    setSelectedItem(itemId);
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+  };
+
+  const closeModal = () => {
+    setSelectedItem(null);
+    document.body.style.overflow = 'unset';
+  };
+
+  const goToNext = () => {
+    const nextIndex = (currentIndex + 1) % filteredItems.length;
+    setCurrentIndex(nextIndex);
+    setSelectedItem(filteredItems[nextIndex].id);
+  };
+
+  const goToPrevious = () => {
+    const prevIndex = currentIndex === 0 ? filteredItems.length - 1 : currentIndex - 1;
+    setCurrentIndex(prevIndex);
+    setSelectedItem(filteredItems[prevIndex].id);
+  };
+
+  // Handle keyboard navigation
+  useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (selectedItem !== null) {
+        if (e.key === 'Escape') closeModal();
+        if (e.key === 'ArrowRight') goToNext();
+        if (e.key === 'ArrowLeft') goToPrevious();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyPress);
+    return () => document.removeEventListener('keydown', handleKeyPress);
+  }, [selectedItem, currentIndex, filteredItems.length]);
+
+  const currentItem = selectedItem ? filteredItems.find(item => item.id === selectedItem) : null;
+
   return (
     <section className="py-20 bg-gray-50" id="portfolio">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header - Meragi Style */}
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Section Header - Gestalt Style */}
         <div 
           ref={ref}
           className={`text-center mb-16 transition-all duration-1000 ${
             inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <div className="inline-block px-4 py-2 bg-primary-100 text-primary-600 rounded-full text-sm font-medium mb-4">
+          <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800 mb-4">
             OUR PORTFOLIO
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 font-serif">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Inspired by your dreams
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -121,7 +195,7 @@ export default function Portfolio() {
           </p>
         </div>
 
-        {/* Category Filter - Mobile Optimized */}
+        {/* Category Filter - Gestalt Style */}
         <div 
           className={`flex flex-wrap justify-center gap-3 mb-12 transition-all duration-1000 delay-200 ${
             inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
@@ -131,10 +205,10 @@ export default function Portfolio() {
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 text-sm md:text-base ${
+              className={`px-6 py-3 rounded-2xl font-medium transition-all duration-300 text-sm md:text-base ${
                 activeCategory === category.id
-                  ? 'bg-primary-600 text-white shadow-lg transform scale-105'
-                  : 'bg-white text-gray-700 hover:bg-primary-50 hover:text-primary-600 shadow-md hover:shadow-lg'
+                  ? 'bg-red-600 text-white shadow-lg transform scale-105'
+                  : 'bg-white text-gray-700 hover:bg-red-50 hover:text-red-600 shadow-md hover:shadow-lg'
               }`}
             >
               {category.name}
@@ -142,113 +216,189 @@ export default function Portfolio() {
           ))}
         </div>
 
-        {/* Portfolio Grid - Masonry Style */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        {/* Pinterest-Style Masonry Grid */}
+        <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
           {filteredItems.map((item, index) => (
             <div
               key={item.id}
-              className={`group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2 ${
-                inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              } ${index % 3 === 1 ? 'md:mt-8' : ''}`}
-              style={{ transitionDelay: `${(index + 3) * 100}ms` }}
+              className={`group relative break-inside-avoid rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 cursor-pointer ${
+                inView ? 'opacity-100' : 'opacity-0'
+              }`}
+              style={{ 
+                transitionDelay: `${index * 100}ms`,
+                marginBottom: '24px'
+              }}
               onMouseEnter={() => setHoveredItem(item.id)}
               onMouseLeave={() => setHoveredItem(null)}
+              onClick={() => openModal(item.id)}
             >
-              {/* Image Container */}
-              <div className="relative h-80 overflow-hidden rounded-t-3xl">
-                {/* Placeholder gradient background */}
-                <div className={`w-full h-full bg-gradient-to-br ${item.color} ${item.color.replace('/20', '/40')}`} />
+              {/* Image Container with Overlay Text */}
+              <div className={`relative ${item.height} overflow-hidden`}>
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
                 
                 {/* Category Badge */}
-                <div className="absolute top-4 left-4 z-10">
-                  <span className="bg-white/90 backdrop-blur-sm text-gray-800 px-3 py-1 rounded-full text-xs font-medium capitalize">
+                <div className="absolute top-4 left-4 z-20">
+                  <span className="bg-white/90 backdrop-blur-sm text-gray-800 px-3 py-1.5 rounded-full text-xs font-semibold capitalize shadow-lg">
                     {item.category === 'corporate' ? 'Engagement' : 
                      item.category === 'celebrations' ? 'Haldi & Mehendi' :
                      item.category}
                   </span>
                 </div>
 
-                {/* Hover Overlay */}
+                {/* Bottom Overlay with Text */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-6">
+                  <h3 className="text-white text-lg font-bold mb-2 leading-tight">
+                    {item.title}
+                  </h3>
+                  <p className="text-white/90 text-sm mb-2">
+                    {item.location}
+                  </p>
+                  <p className="text-white/80 text-sm leading-relaxed mb-3 line-clamp-2">
+                    {item.description}
+                  </p>
+                  
+                  {/* Client and Date */}
+                  <div className="flex items-center justify-between text-xs text-white/70">
+                    <div className="flex items-center">
+                      <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                      </svg>
+                      {item.client}
+                    </div>
+                    <span className="text-white/80 font-medium">{item.date}</span>
+                  </div>
+                </div>
+
+                {/* Hover Overlay with CTA */}
                 <div 
-                  className={`absolute inset-0 bg-black/60 transition-all duration-300 ${
+                  className={`absolute inset-0 bg-black/40 transition-all duration-300 flex items-center justify-center ${
                     hoveredItem === item.id ? 'opacity-100' : 'opacity-0'
                   }`}
                 >
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Link
-                      href={`/portfolio/${item.id}`}
-                      className="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors transform hover:scale-105"
-                    >
-                      View Details
-                    </Link>
+                  <div className="bg-white text-gray-900 px-6 py-3 rounded-2xl font-semibold hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-xl">
+                    View Details
                   </div>
-                </div>
-
-                {/* Gradient Overlay for Text */}
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent h-32"></div>
-                
-                {/* Image Info Overlay */}
-                <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <h3 className="text-xl font-bold mb-1">{item.title}</h3>
-                  <p className="text-sm opacity-90">{item.location}</p>
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-6">
-                <p className="text-gray-600 mb-4 leading-relaxed">
-                  {item.description}
-                </p>
-
-                <div className="flex items-center justify-between text-sm text-gray-500">
-                  <div className="flex items-center">
-                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg>
-                    {item.client}
-                  </div>
-                  <span className="text-primary-600 font-medium">{item.date}</span>
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Bottom CTA - Meragi Style */}
-        <div 
-          className={`text-center transition-all duration-1000 delay-700 ${
-            inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
-        >
-          <div className="bg-white rounded-3xl p-12 shadow-xl">
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-serif">
-              A legacy of love
-            </h3>
-            <p className="text-xl text-gray-600 mb-8">
-              Meragi Weddings
-            </p>
-            <Link
-              href="/portfolio"
-              className="inline-flex items-center bg-primary-600 text-white px-8 py-4 rounded-full hover:bg-primary-700 transition-colors font-semibold text-lg group"
-            >
-              Explore Complete Portfolio
-              <svg
-                className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </Link>
-          </div>
+        {/* Load More Button */}
+        <div className="text-center mt-12">
+          <button className="bg-white text-gray-700 border-2 border-gray-200 px-8 py-3 rounded-2xl hover:border-red-600 hover:text-red-600 transition-all duration-200 font-medium">
+            Load More Projects
+          </button>
         </div>
       </div>
+
+      {/* Full Screen Modal */}
+      {selectedItem && currentItem && (
+        <div className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center">
+          {/* Close Button */}
+          <button
+            onClick={closeModal}
+            className="absolute top-6 right-6 z-60 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+          {/* Previous Button */}
+          <button
+            onClick={goToPrevious}
+            className="absolute left-6 top-1/2 transform -translate-y-1/2 z-60 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          {/* Next Button */}
+          <button
+            onClick={goToNext}
+            className="absolute right-6 top-1/2 transform -translate-y-1/2 z-60 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          {/* Modal Content */}
+          <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            {/* Image */}
+            <div className="relative">
+              <img
+                src={currentItem.image}
+                alt={currentItem.title}
+                className="w-full h-auto max-h-[80vh] object-cover rounded-3xl shadow-2xl"
+              />
+            </div>
+
+            {/* Details */}
+            <div className="text-white space-y-6">
+              {/* Category Badge */}
+              <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-red-600 text-white">
+                {currentItem.category === 'corporate' ? 'Engagement' : 
+                 currentItem.category === 'celebrations' ? 'Haldi & Mehendi' :
+                 currentItem.category.charAt(0).toUpperCase() + currentItem.category.slice(1)}
+              </div>
+
+              {/* Title */}
+              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+                {currentItem.title}
+              </h2>
+
+              {/* Location and Date */}
+              <div className="flex items-center space-x-6 text-gray-300">
+                <div className="flex items-center">
+                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  {currentItem.location}
+                </div>
+                <div className="flex items-center">
+                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  {currentItem.date}
+                </div>
+              </div>
+
+              {/* Client */}
+              <div className="flex items-center text-gray-300">
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                {currentItem.client}
+              </div>
+
+              {/* Description */}
+              <p className="text-xl leading-relaxed text-gray-200">
+                {currentItem.description}
+              </p>
+
+              {/* CTA Button */}
+              <div className="pt-4">
+                <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-colors">
+                  Contact Us for Similar Event
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Image Counter */}
+          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white/80 text-sm">
+            {currentIndex + 1} / {filteredItems.length}
+          </div>
+        </div>
+      )}
     </section>
   );
 }

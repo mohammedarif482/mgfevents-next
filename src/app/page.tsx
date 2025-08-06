@@ -1,3 +1,4 @@
+/* page.tsx */
 import { Metadata } from 'next';
 import Header from '@/components/header';
 import Hero from '@/components/hero';
