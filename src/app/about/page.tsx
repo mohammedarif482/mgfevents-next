@@ -91,7 +91,7 @@ export default function AboutPageRedesigned() {
         
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 font-against">
             About MGF Events
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
@@ -105,27 +105,25 @@ export default function AboutPageRedesigned() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Story</h2>
-              <div className="space-y-6 text-gray-600 leading-relaxed text-lg">
+<h2 className="text-4xl md:text-5xl font-bold mb-6 font-against" style={{color: '#E55E27'}}>Our Story</h2>              <div className="space-y-6 text-gray-600 leading-relaxed text-lg">
                 <p>
-                  Founded in 2010 by Meera George, MGF Events began as a small dream to create extraordinary celebrations that honor Kerala&apos;s rich cultural heritage while embracing modern sophistication. What started as a passion project has grown into one of Kerala&apos;s most trusted event management companies.
+                 MGF Events has been part of countless magical moments – from intimate backwater weddings to grand corporate galas. Each event teaches us something new, and every client becomes part of our extended family. We believe that behind every great celebration is a story worth telling, and we're honored to be the storytellers.
+
                 </p>
                 <p>
-                  Our journey has been marked by countless magical moments – from intimate backwater weddings to grand corporate galas. Each event teaches us something new, and every client becomes part of our extended family. We believe that behind every great celebration is a story worth telling, and we&apos;re honored to be the storytellers.
+                Today, with over 1,000 successful events and a team of passionate professionals, MGF continues to push boundaries, embrace innovation, and create experiences that leave lasting impressions on hearts and minds.
                 </p>
-                <p>
-                  Today, with over 1000 successful events and a team of passionate professionals, we continue to push boundaries, embrace innovation, and create experiences that leave lasting impressions on hearts and minds.
-                </p>
+              
               </div>
             </div>
-            <div className="relative">
-              <div className="w-full h-96 bg-gradient-to-br from-red-500 to-red-700 rounded-3xl flex items-center justify-center shadow-2xl">
-                <div className="text-center text-white">
-                  <div className="text-6xl md:text-7xl font-bold mb-4">14+</div>
-                  <div className="text-xl md:text-2xl font-medium">Years of Excellence</div>
-                </div>
-              </div>
-            </div>
+        <div className="relative">
+  <div className="w-96 h-96 rounded-full border-2 flex items-center justify-center  bg-white mx-auto" 
+       style={{borderColor: 'rgba(229, 94, 39, 0.9)'}}>
+    <img src="/assets/images/19.png" 
+         alt="MGF Events" 
+         className="w-80 h-80 object-cover rounded-full" />
+  </div>
+</div>
           </div>
         </div>
       </section>
@@ -137,7 +135,7 @@ export default function AboutPageRedesigned() {
             <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800 mb-4">
               OUR VALUES
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">What Drives Us</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-again">What Drives Us</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               These core principles guide everything we do and shape every interaction we have with our clients
             </p>
@@ -146,9 +144,8 @@ export default function AboutPageRedesigned() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <div key={index} className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 text-center group hover:-translate-y-2">
-                <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">{value.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-red-600 transition-colors">{value.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{value.description}</p>
+                {/* <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">{value.icon}</div> */}
+<h3 className="text-xl font-bold text-[#E55E27] mb-4 transition-colors">{value.title}</h3>                <p className="text-gray-600 leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>
@@ -156,7 +153,7 @@ export default function AboutPageRedesigned() {
       </section>
 
       {/* Timeline Section - Gestalt Style */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800 mb-4">
@@ -169,7 +166,7 @@ export default function AboutPageRedesigned() {
           </div>
 
           <div className="relative max-w-4xl mx-auto">
-            {/* Timeline Line */}
+         
             <div className="absolute left-1/2 transform -translate-x-0.5 h-full w-1 bg-red-200 hidden md:block"></div>
             
             <div className="space-y-12">
@@ -183,7 +180,7 @@ export default function AboutPageRedesigned() {
                     </div>
                   </div>
                   
-                  {/* Timeline Dot */}
+    
                   <div className="relative z-10 hidden md:block">
                     <div className="w-6 h-6 bg-red-600 rounded-full border-4 border-white shadow-lg"></div>
                   </div>
@@ -194,10 +191,10 @@ export default function AboutPageRedesigned() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Team Section - Gestalt Style */}
-      <section className="py-20 bg-gray-50">
+      {/* <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800 mb-4">
@@ -215,9 +212,9 @@ export default function AboutPageRedesigned() {
                 key={member.id}
                 className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2 cursor-pointer"
                 onClick={() => setActiveTeamMember(member)}
-              >
+              > */}
                 {/* Image Container */}
-                <div className="relative h-72 overflow-hidden rounded-t-3xl">
+                {/* <div className="relative h-72 overflow-hidden rounded-t-3xl">
                   <img
                     src={member.image}
                     alt={member.name}
@@ -230,10 +227,10 @@ export default function AboutPageRedesigned() {
                         Read More
                       </button>
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* Bottom Overlay with Text */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-6">
+                  {/* <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-6">
                     <h3 className="text-white text-xl font-bold mb-1 leading-tight">{member.name}</h3>
                     <p className="text-white/90 text-sm">{member.role}</p>
                   </div>
@@ -248,92 +245,42 @@ export default function AboutPageRedesigned() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Team Member Modal - Full Screen */}
-      {activeTeamMember && (
-        <div className="fixed inset-0 bg-black z-50">
-          {/* Full Screen Image */}
-          <img
-            src={activeTeamMember.image}
-            alt={activeTeamMember.name}
-            className="w-full h-full object-cover"
-          />
-
-          {/* Close Button */}
-          <button
-            onClick={() => setActiveTeamMember(null)}
-            className="absolute top-6 right-6 z-60 w-12 h-12 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-
-          {/* Details Overlay - Bottom */}
-          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent p-8">
-            <div className="max-w-4xl mx-auto text-white">
-              {/* Role Badge */}
-              <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-red-600 text-white mb-4">
-                TEAM MEMBER
-              </div>
-
-              {/* Name and Role */}
-              <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-2">
-                {activeTeamMember.name}
-              </h2>
-              <p className="text-xl text-red-400 font-medium mb-6">
-                {activeTeamMember.role}
-              </p>
-
-              {/* Bio */}
-              <p className="text-lg leading-relaxed text-gray-200 mb-6 max-w-3xl">
-                {activeTeamMember.bio}
-              </p>
-
-              {/* CTA Button */}
-              <Link href="/contact" onClick={() => setActiveTeamMember(null)}>
-                <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-2xl font-semibold transition-colors">
-                  Get In Touch
-                </button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      )}
-
+     
       {/* CTA Section - Gestalt Style */}
-      <section className="py-20 bg-red-600 relative overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-          }}></div>
-        </div>
-        
-        <div className="relative z-10 max-w-4xl mx-auto text-center px-6">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Let&apos;s Create Something Amazing Together
-          </h2>
-          <p className="text-xl text-red-100 mb-8 leading-relaxed">
-            Ready to turn your vision into reality? Our team is here to make your event extraordinary.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-white text-red-600 px-8 py-4 rounded-2xl hover:bg-gray-100 transition-colors font-semibold text-lg"
-            >
-              Get In Touch
-            </Link>
-            <Link
-              href="/portfolio"
-              className="border-2 border-white text-white hover:bg-white hover:text-red-600 px-8 py-4 rounded-2xl transition-colors font-semibold text-lg"
-            >
-              View Our Work
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* CTA Section - Gestalt Style */}
+<section className="py-20 bg-[#E55E27] relative overflow-hidden">
+  {/* Background Pattern */}
+  <div className="absolute inset-0 opacity-10">
+    <div className="absolute inset-0" style={{
+      backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+    }}></div>
+  </div>
+  
+  <div className="relative z-10 max-w-4xl mx-auto text-center px-6">
+    <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      Let&apos;s Create Something Amazing Together
+    </h2>
+    <p className="text-xl text-orange-100 mb-8 leading-relaxed">
+      Ready to turn your vision into reality? Our team is here to make your event extraordinary.
+    </p>
+    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      <Link
+        href="/contact"
+        className="bg-white text-[#E55E27] px-8 py-4 rounded-2xl hover:bg-gray-100 transition-colors font-semibold text-lg"
+      >
+        Get In Touch
+      </Link>
+      <Link
+        href="/portfolio"
+        className="border-2 border-white text-white hover:bg-white hover:text-[#E55E27] px-8 py-4 rounded-2xl transition-colors font-semibold text-lg"
+      >
+        View Our Work
+      </Link>
+    </div>
+  </div>
+</section>
 
       <Footer />
     </div>

@@ -1,4 +1,4 @@
-/* globals.css */
+/* src/app/globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,10 +7,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 
+/* Custom Font Definition - Against Regular */
+@font-face {
+  font-family: 'Against Regular';
+src: url('/fonts/against regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* CSS Variables */
 :root {
   --font-inter: 'Inter', system-ui, sans-serif;
   --font-playfair: 'Playfair Display', serif;
+  --font-against: 'Against Regular', Arial, sans-serif;
 }
 
 /* Base Styles */
@@ -30,8 +40,30 @@ body {
   color: #1f2937;
 }
 
+/* Brand Colors */
+.bg-brand-primary {
+  background-color: #E55E27;
+}
+
+.hover\:bg-brand-primary-dark:hover {
+  background-color: #E55E27;
+}
+
+/* Font Classes */
 .font-serif {
   font-family: var(--font-playfair);
+}
+
+.font-against {
+  font-family: var(--font-against) !important;
+}
+
+/* Test class to verify font is working - REMOVE AFTER TESTING */
+.test-font {
+  font-family: 'Against Regular', Arial, sans-serif;
+  font-size: 24px;
+  color: #ff0000;
+  margin: 20px 0;
 }
 
 /* Custom Scrollbar */
@@ -71,7 +103,7 @@ a:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-  outline: 2px solid #db2777;
+  outline: 2px solid #48db27;
   outline-offset: 2px;
 }
 
@@ -86,8 +118,8 @@ select:focus-visible {
 
 /* Text Selection */
 ::selection {
-  background-color: #fbcfe8;
-  color: #831843;
+  background-color: #fbe4cf;
+  color: #833f18;
 }
 
 /* Form Styles */
@@ -117,14 +149,8 @@ select:focus-visible {
     scroll-behavior: auto !important;
   }
 }
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-/* globals.css */
+
+/* No Scrollbar */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }

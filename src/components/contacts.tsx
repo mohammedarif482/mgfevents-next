@@ -49,24 +49,24 @@ export default function ContactRedesigned() {
   };
 
   return (
-    <section className="py-20 bg-gray-900" id="contact">
+    <section className="py-20 bg-black" id="contact">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header - Gestalt Style */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800 mb-4">
+          <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-[#E55E27] text-white mb-4">
             GET IN TOUCH
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Got a wedding in the works?
           </h2>
-          <p className="text-xl text-red-400 font-medium">
+          <p className="text-xl text-[#E55E27] font-medium">
             Let's make some magic happen!
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form - Gestalt Style */}
-          <div className="order-2 lg:order-1">
+          <div className=" order-2 lg:order-1">
             <div className="bg-white rounded-3xl p-8 shadow-2xl">
               <div className="mb-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Consult an Expert</h3>
@@ -110,7 +110,7 @@ export default function ContactRedesigned() {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-[#E55E27] focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
                       placeholder="Your full name"
                     />
                   </div>
@@ -126,7 +126,7 @@ export default function ContactRedesigned() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-[#E55E27] focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -144,7 +144,7 @@ export default function ContactRedesigned() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-[#E55E27] focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
                       placeholder="+91 XXXXX XXXXX"
                     />
                   </div>
@@ -159,7 +159,7 @@ export default function ContactRedesigned() {
                       required
                       value={formData.eventType}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all duration-200 text-gray-900 bg-white"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-[#E55E27] focus:border-transparent transition-all duration-200 text-gray-900 bg-white"
                     >
                       <option value="">Select event type</option>
                       <option value="wedding">Wedding</option>
@@ -184,7 +184,7 @@ export default function ContactRedesigned() {
                       name="eventDate"
                       value={formData.eventDate}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all duration-200 text-gray-900"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-[#E55E27] focus:border-transparent transition-all duration-200 text-gray-900"
                     />
                   </div>
                   
@@ -197,7 +197,7 @@ export default function ContactRedesigned() {
                       name="budget"
                       value={formData.budget}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all duration-200 text-gray-900 bg-white"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-[#E55E27] focus:border-transparent transition-all duration-200 text-gray-900 bg-white"
                     >
                       <option value="">Select budget range</option>
                       <option value="under-1lakh">Under ₹1 Lakh</option>
@@ -220,7 +220,7 @@ export default function ContactRedesigned() {
                     rows={4}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all duration-200 resize-none text-gray-900 placeholder-gray-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-[#E55E27] focus:border-transparent transition-all duration-200 resize-none text-gray-900 placeholder-gray-500"
                     placeholder="Share your vision, special requirements, or any questions you have..."
                   />
                 </div>
@@ -229,7 +229,7 @@ export default function ContactRedesigned() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+                  className="w-full bg-[#E55E27] hover:bg-[#C44916] text-white px-8 py-4 rounded-2xl font-semibold text-lg disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#E55E27] focus:ring-offset-2"
                 >
                   {isSubmitting ? (
                     <div className="flex items-center justify-center">
@@ -251,7 +251,7 @@ export default function ContactRedesigned() {
           <div className="order-1 lg:order-2">
             <div className="space-y-6">
               {/* Expert Guidance Card */}
-              <div className="bg-red-600 rounded-3xl p-8 text-white">
+              <div className="bg-[#E55E27] rounded-3xl p-8 text-white">
                 <div className="flex items-center mb-6">
                   <div className="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center mr-4">
                     <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -260,10 +260,10 @@ export default function ContactRedesigned() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-1">Expert guidance</h3>
-                    <p className="text-red-100">for stress-free decisions</p>
+                    <p className="text-[#E55E27]/30">for stress-free decisions</p>
                   </div>
                 </div>
-                <p className="text-red-50 leading-relaxed">
+                <p className="text-white/90 leading-relaxed">
                   Backed by Experience from 2,500+ Weddings. Our expert team is here to guide you through every step of your special day.
                 </p>
               </div>
@@ -276,13 +276,12 @@ export default function ContactRedesigned() {
                 <div className="space-y-6">
                   {[
                     { city: 'Kozhikode', address: 'MGF Events, Business District, Kozhikode' },
-                    { city: 'Kochi', address: 'Marine Drive, Ernakulam, Kochi' },
-                    { city: 'Thiruvananthapuram', address: 'Technopark, Trivandrum' }
+                 
                   ].map((office) => (
                     <div key={office.city} className="group">
                       <h4 className="font-bold text-gray-900 text-base mb-1">{office.city}</h4>
                       <p className="text-gray-600 text-sm mb-2">{office.address}</p>
-                      <Link href="#" className="text-red-600 hover:text-red-700 font-medium text-sm group-hover:underline inline-flex items-center">
+                      <Link href="https://share.google/oeHSMdbHVwMLuTNBf" className="text-[#E55E27] hover:text-[#C44916] font-medium text-sm group-hover:underline inline-flex items-center">
                         Get Directions 
                         <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -299,20 +298,20 @@ export default function ContactRedesigned() {
                 
                 <div className="space-y-4">
                   <div className="flex items-center">
-                    <div className="w-12 h-12 bg-red-100 rounded-2xl flex items-center justify-center mr-4">
-                      <svg className="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-12 h-12 bg-[#E55E27]/10 rounded-2xl flex items-center justify-center mr-4">
+                      <svg className="w-5 h-5 text-[#E55E27]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
                     </div>
                     <div>
                       <div className="font-semibold text-gray-900">Phone</div>
-                      <div className="text-gray-600">+91 XXXXX XXXXX</div>
+                      <div className="text-gray-600">+91 9387039393 <br />+91 9388039393</div>
                     </div>
                   </div>
 
                   <div className="flex items-center">
-                    <div className="w-12 h-12 bg-red-100 rounded-2xl flex items-center justify-center mr-4">
-                      <svg className="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-12 h-12 bg-[#E55E27]/10 rounded-2xl flex items-center justify-center mr-4">
+                      <svg className="w-5 h-5 text-[#E55E27]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </div>
@@ -322,9 +321,9 @@ export default function ContactRedesigned() {
                     </div>
                   </div>
 
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-red-100 rounded-2xl flex items-center justify-center mr-4">
-                      <svg className="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  {/* <div className="flex items-center">
+                    <div className="w-12 h-12 bg-[#E55E27]/10 rounded-2xl flex items-center justify-center mr-4">
+                      <svg className="w-5 h-5 text-[#E55E27]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                     </div>
@@ -332,7 +331,7 @@ export default function ContactRedesigned() {
                       <div className="font-semibold text-gray-900">Working Hours</div>
                       <div className="text-gray-600 text-sm">Mon-Fri: 9AM-6PM<br />Sat: 9AM-4PM</div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

@@ -10,8 +10,8 @@ import Footer from '@/components/footer';
 
 // Enhanced metadata with local SEO
 export const metadata: Metadata = {
-  title: 'MGF Events - Best Wedding Planners & Event Management in Kerala | Kochi, Kozhikode, Trivandrum',
-  description: 'Leading event management company in Kerala specializing in traditional Kerala weddings, corporate events, and celebrations in Kochi, Kozhikode, Trivandrum. 10+ years experience, 500+ successful events.',
+  title: 'MGF Events - Best Wedding Planners & Event Management in Kerala |  Kozhikode',
+  description: 'Leading event management company in Kerala specializing in traditional Kerala weddings, corporate events, and celebrations in Kozhikode. 10+ years experience, 500+ successful events.',
   keywords: [
     'wedding planners Kerala',
     'event management Kochi', 
@@ -49,7 +49,7 @@ const localBusinessSchema = {
   "name": "MGF Events",
   "description": "Premier wedding planning and event management services in Kerala",
   "url": "https://www.mgfevent.com",
-  "telephone": "+91-XXXXX-XXXXX",
+  "telephone": "+91 9387039393 | +91 9388039393",
   "email": "info@mgfevent.com",
   "address": {
     "@type": "PostalAddress",
@@ -127,20 +127,27 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Kerala&apos;s Most Trusted Event Management Company
-            </h2>
+          <h2 className="text-4xl font-bold mb-6 font-against" style={{color: '#E55E27'}}>
+  Celebrations Beyond Imagination
+</h2>
             <p className="text-lg text-gray-600 leading-relaxed mb-8">
-              Since 2014, MGF Events has been Kerala&apos;s premier choice for <strong>wedding planning</strong>, 
-              <strong>corporate event management</strong>, and <strong>celebration coordination</strong>. 
-              Based in Kozhikode and serving clients across Kochi, Trivandrum, Thrissur, and beyond, 
-              we specialize in creating authentic Kerala experiences while incorporating modern elegance.
+            MGF Events started <strong>over 20 years</strong> ago as Maha Ganapati Flowers, 
+            a small flower vendor in Karnataka. We were the first to introduce fresh flower marketing in Calicut, 
+            Kerala, and from these humble beginnings, 
+            we grew into a trusted event management company known for<strong> creativity, precision, and a personal touch.</strong>
+
+
+            </p>
+              <p className="text-lg text-gray-600 leading-relaxed mb-8">
+        Today, we bring your visions to life—whether 
+        it’s <strong>dreamy weddings, corporate events, 
+        or family celebrations.</strong>  Our expert team manages every detail, 
+        from venue and décor to entertainment and hospitality, ensuring your event is flawlessly planned and beautifully executed. 
+        With two decades of experience, MGF Events is dedicated to making every moment magical.
+
             </p>
             <p className="text-lg text-gray-600 leading-relaxed mb-8">
-              Our expertise in <strong>traditional Kerala weddings</strong>, from intimate backwater ceremonies 
-              to grand palace celebrations, combined with our knowledge of local venues, vendors, and customs, 
-              makes us the perfect partner for your special day. We&apos;ve successfully managed over 500 events, 
-              earning the trust of families and businesses throughout Kerala.
+           <strong>MGF Events </strong>– Where your moments become magical memories.
             </p>
           </div>
         </div>

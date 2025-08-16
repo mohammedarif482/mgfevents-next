@@ -1,182 +1,235 @@
 /* components/services-redesigned.tsx */
 'use client';
 
-import { useState } from 'react';
-import Link from 'next/link';
+import React from 'react';
 
-const services = [
-  {
-    id: 1,
-    title: 'Wedding Planning',
-    description: 'From intimate ceremonies to grand celebrations, we create magical weddings that reflect your unique love story with traditional Kerala charm.',
-    icon: '💍',
-    features: ['Venue Selection', 'Decoration Design', 'Catering Coordination', 'Photography'],
-    href: '/services/wedding-planning',
-    gradient: 'from-pink-500 to-rose-600'
-  },
-  {
-    id: 2,
-    title: 'Corporate Events',
-    description: 'Professional corporate event management including conferences, seminars, product launches, and team building activities.',
-    icon: '🏢',
-    features: ['Conference Planning', 'Team Building', 'Product Launches', 'Award Ceremonies'],
-    href: '/services/corporate-events',
-    gradient: 'from-blue-500 to-indigo-600'
-  },
-  {
-    id: 3,
-    title: 'Event Decoration',
-    description: 'Transform any venue into a stunning space with our creative decoration services, from floral arrangements to lighting design.',
-    icon: '🎨',
-    features: ['Floral Design', 'Lighting Setup', 'Theme Creation', 'Stage Design'],
-    href: '/services/decoration',
-    gradient: 'from-purple-500 to-violet-600'
-  },
-  {
-    id: 4,
-    title: 'Catering Services',
-    description: 'Delicious cuisine that delights your guests with authentic Kerala flavors and international dishes prepared by expert chefs.',
-    icon: '🍽️',
-    features: ['Kerala Cuisine', 'International Menu', 'Live Counters', 'Special Diets'],
-    href: '/services/catering',
-    gradient: 'from-orange-500 to-red-600'
-  },
-  {
-    id: 5,
-    title: 'Photography & Video',
-    description: 'Capture every precious moment with our professional photography and videography services, creating timeless memories.',
-    icon: '📸',
-    features: ['Wedding Photography', 'Drone Coverage', 'Cinematic Videos', 'Same Day Edits'],
-    href: '/services/photography',
-    gradient: 'from-green-500 to-emerald-600'
-  },
-  {
-    id: 6,
-    title: 'Venue Consultation',
-    description: 'Find the perfect venue from our curated selection of unique locations across Kerala, from heritage properties to modern spaces.',
-    icon: '🏛️',
-    features: ['Venue Sourcing', 'Site Visits', 'Permit Handling', 'Layout Planning'],
-    href: '/services/venue-consultation',
-    gradient: 'from-teal-500 to-cyan-600'
-  },
-];
-
-export default function ServicesRedesigned() {
-  const [hoveredService, setHoveredService] = useState<number | null>(null);
-
+// Individual Service Card Component
+const ServiceCard = ({ 
+  title, 
+  description, 
+  features, 
+  backgroundImage, 
+  buttonText = "Explore Service" 
+}: {
+  title: string;
+  description: string;
+  features: string[];
+  backgroundImage: string;
+  buttonText?: string;
+}) => {
   return (
-    <section className="py-20 bg-white" id="services">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Section Header - Gestalt Style */}
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800 mb-4">
-            OUR SERVICES
+    <div className="relative rounded-3xl overflow-hidden shadow-xl group hover:shadow-2xl transition-all duration-300" style={{ height: '32rem' }}>
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105"
+        style={{
+          backgroundImage: `url("${backgroundImage}")`
+        }}
+      />
+      
+      {/* Overlay with Precise Gradient Control */}
+      <div className="absolute inset-0">
+        {/* Black gradient overlay */}
+        <div 
+          className="absolute inset-0"
+          style={{
+            background: 'linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 20%, rgba(0,0,0,0.1) 40%, transparent 60%)'
+          }}
+        ></div>
+        
+        {/* Backdrop blur that fades off at 70% */}
+        <div 
+          className="absolute inset-0"
+          style={{
+            backdropFilter: 'blur(2px)',
+            WebkitBackdropFilter: 'blur(2px)',
+            mask: 'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0.3) 60%, transparent 70%)',
+            WebkitMask: 'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0.3) 60%, transparent 70%)'
+          }}
+        ></div>
+        
+        {/* Soft flowing shapes */}
+        <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-2xl"></div>
+        <div className="absolute top-10 right-10 w-20 h-20 bg-white/8 rounded-full blur-xl"></div>
+        <div className="absolute bottom-0 left-0 w-40 h-40 bg-white/5 rounded-full blur-3xl"></div>
+        
+        {/* Decorative elements */}
+        <div className="absolute top-6 right-6">
+          <div className="flex space-x-2">
+            <div className="w-2 h-2 bg-white/40 rounded-full"></div>
+            <div className="w-1.5 h-1.5 bg-white/30 rounded-full mt-0.5"></div>
+            <div className="w-1 h-1 bg-white/20 rounded-full mt-1"></div>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Thoughtful services,<br />
-            <span className="text-red-600">priceless moments</span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            lovingly crafted just for you
-          </p>
+        </div>
+      </div>
+
+      {/* Content Container */}
+      <div className="relative h-full flex flex-col justify-end p-8">
+        
+        {/* Title */}
+        <div className="mb-4">
+          <h3 className="text-2xl font-bold text-white mb-2 leading-tight">
+            {title}
+          </h3>
+          <div className="w-12 h-0.5 bg-white/60"></div>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service) => (
-            <div
-              key={service.id}
-              className={`group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2 ${
-                hoveredService === service.id ? 'shadow-2xl -translate-y-2' : ''
-              }`}
-              onMouseEnter={() => setHoveredService(service.id)}
-              onMouseLeave={() => setHoveredService(null)}
-            >
-              {/* Service Icon Header */}
-              <div className={`h-48 bg-gradient-to-br ${service.gradient} relative flex items-center justify-center`}>
-                <div className="text-6xl opacity-90">
-                  {service.icon}
-                </div>
-                
-                {/* Hover Overlay */}
-                {hoveredService === service.id && (
-                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center transition-all duration-300">
-                    <Link
-                      href={service.href}
-                      className="bg-white text-gray-900 px-6 py-3 rounded-2xl font-semibold hover:bg-gray-100 transition-colors transform hover:scale-105"
-                    >
-                      Learn More
-                    </Link>
-                  </div>
-                )}
-              </div>
+        {/* Description */}
+        <p className="text-white/90 text-sm leading-relaxed mb-6 font-light">
+          {description}
+        </p>
 
-              {/* Service Content */}
-              <div className="p-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-red-600 transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  {service.description}
-                </p>
-
-                {/* Features List */}
-                <div className="space-y-2 mb-6">
-                  {service.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center text-sm text-gray-500">
-                      <div className="w-1.5 h-1.5 bg-red-400 rounded-full mr-3 flex-shrink-0"></div>
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-
-                {/* CTA Link */}
-                <Link
-                  href={service.href}
-                  className="inline-flex items-center text-red-600 hover:text-red-700 font-semibold group/link"
-                >
-                  Explore Service
-                  <svg
-                    className="w-4 h-4 ml-2 transition-transform group-hover/link:translate-x-1"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </Link>
-              </div>
+        {/* Feature List */}
+        <div className="space-y-2 mb-8">
+          {features.map((feature, index) => (
+            <div key={index} className="flex items-center text-white/85">
+              <svg className="w-4 h-4 mr-3 text-white/70" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+              <span className="text-sm font-medium">{feature}</span>
             </div>
           ))}
         </div>
 
-        {/* Bottom CTA Section - Gestalt Style */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-3xl p-12 text-white">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">
-              Got an event in the works?
+        {/* CTA Button */}
+        <button className="w-full text-left text-white/90 py-3.5 px-0 font-semibold text-sm hover:text-white transition-all duration-300 group">
+          <div className="flex items-center">
+            <span>{buttonText}</span>
+            <svg className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+        </button>
+      </div>
+
+      {/* Top decorative corner */}
+      <div className="absolute top-0 left-0 w-16 h-16">
+        <div className="absolute top-4 left-4 w-8 h-8 border border-white/20 rounded-full"></div>
+        <div className="absolute top-6 left-6 w-4 h-4 bg-white/30 rounded-full"></div>
+      </div>
+    </div>
+  );
+};
+
+// Main Services Component (Replaces ServicesRedesigned)
+export default function ServicesRedesigned() {
+  const services = [
+    {
+      title: "Wedding Planning",
+      description: "From intimate ceremonies to grand celebrations, our comprehensive wedding planning services reflect your unique love story with meticulous attention to every detail.",
+      features: [
+        "Venue Selection",
+        "Decoration Design", 
+        "Complete Coordination",
+        "Timeline Management"
+      ],
+      backgroundImage: "https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/0035%201.png"
+    },
+    {
+      title: "Event Management",
+      description: "Professional event management for corporate gatherings, celebrations, and special occasions. We handle every aspect to ensure your event runs seamlessly.",
+      features: [
+        "Corporate Events",
+        "Birthday Parties",
+        "Anniversary Celebrations",
+        "Event Coordination"
+      ],
+      backgroundImage: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop&crop=center"
+    },
+    {
+      title: "Destination Weddings",
+      description: "Make your dream destination wedding a reality. We specialize in creating magical experiences in stunning locations with complete logistical support.",
+      features: [
+        "Location Scouting",
+        "Travel Coordination",
+        "Local Vendor Management",
+        "Guest Accommodation"
+      ],
+      backgroundImage: "https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/DSC01883%201.png"
+    },
+    {
+      title: "Event Decor",
+      description: "Exquisite floral arrangements that capture the essence of your celebration. From bridal bouquets to venue decorations, we create stunning floral artistry.",
+      features: [
+        "Bridal Bouquets",
+        "Venue Decorations",
+        "Centerpieces",
+        "Custom Arrangements"
+      ],
+      backgroundImage: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800&h=600&fit=crop&crop=center"
+    },
+    {
+      title: "Corporate Events",
+      description: "From impactful conferences to grand celebrations, our corporate event services are designed to strengthen your brand presence and create lasting impressions with seamless execution.",
+      features: [
+       "Venue Management",
+
+"Stage & Theme Design",
+
+"End-to-End Coordination",
+
+"Schedule & Program Management"
+      ],
+      backgroundImage: "https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/IMG_4909.JPG"
+    },
+    {
+      title: "Catering Services",
+      description: "Delicious cuisine tailored to your taste and style. From traditional Kerala dishes to international cuisine, we create memorable dining experiences.",
+      features: [
+        "Traditional Kerala Cuisine",
+        "International Menus",
+        "Custom Catering",
+        "Live Cooking Stations"
+      ],
+      backgroundImage: "https://images.unsplash.com/photo-1555244162-803834f70033?w=800&h=600&fit=crop&crop=center"
+    }
+  ];
+
+  return (
+    <section className="py-20 bg-gray-50" id="services">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Section Header - Consistent with your contact form style */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800 mb-4">
+            OUR SERVICES
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 font-against">
+            Complete Wedding Solutions
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            From planning to execution, we provide comprehensive services to make your special day absolutely perfect
+          </p>
+        </div>
+
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <ServiceCard
+              key={index}
+              title={service.title}
+              description={service.description}
+              features={service.features}
+              backgroundImage={service.backgroundImage}
+            />
+          ))}
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center mt-16">
+          <div className="bg-white rounded-3xl p-8 shadow-xl max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4 ">
+              Ready to Start Planning Your Perfect Event?
             </h3>
-            <p className="text-xl mb-8 text-red-100">
-              Let's make some magic happen!
+            <p className="text-gray-600 mb-6">
+              Let our expert team help you create unforgettable memories. Contact us for a free consultation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-white text-red-600 px-8 py-4 rounded-2xl hover:bg-gray-100 transition-colors font-semibold text-lg"
-              >
-                Consult an Expert
-              </Link>
-              <Link
-                href="/portfolio"
-                className="border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-2xl transition-colors font-medium text-lg"
-              >
-                View Our Work
-              </Link>
+              <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-2xl font-semibold transition-colors duration-200">
+                Get Free Consultation
+              </button>
+              <button className="border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white px-8 py-3 rounded-2xl font-semibold transition-all duration-200">
+                View Portfolio
+              </button>
             </div>
           </div>
         </div>

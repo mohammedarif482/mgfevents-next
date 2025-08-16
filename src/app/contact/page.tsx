@@ -11,17 +11,17 @@ const contactInfo = [
   {
     icon: '📍',
     title: 'Office Address',
-    details: ['MGF Events & Entertainments', 'Kochi, Kerala 682001', 'India'],
+    details: ['MGF Events, Near Azhakodi Temple, Jafarkhan Colony, Mavoor Road,Calicut - 04, Kerala 673004', 'India'],
   },
   {
     icon: '📞',
     title: 'Phone Numbers',
-    details: ['+91 98765 43210', '+91 87654 32109', 'Available 24/7'],
+    details: ['+91 9387039393', '+91 9388039393',],
   },
   {
     icon: '✉️',
     title: 'Email Address',
-    details: ['info@mgfevent.com', 'events@mgfevent.com', 'Quick Response Guaranteed'],
+    details: ['info@mgfevent.com'],
   },
   {
     icon: '🕒',
@@ -138,37 +138,12 @@ export default function ContactPageRedesigned() {
         
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+<h1 className="text-5xl md:text-6xl font-bold text-white mb-6 font-against">
             Contact Us
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
             Ready to plan your dream event? Get in touch with our team and let&apos;s start creating something extraordinary together
           </p>
-        </div>
-      </section>
-
-      {/* Contact Info Cards - Gestalt Style */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {contactInfo.map((info, index) => (
-              <div key={index} className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden group hover:-translate-y-2">
-                <div className="h-24 bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center">
-                  <span className="text-4xl group-hover:scale-110 transition-transform duration-300">{info.icon}</span>
-                </div>
-                <div className="p-8">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-red-600 transition-colors">{info.title}</h3>
-                  <div className="space-y-2">
-                    {info.details.map((detail, idx) => (
-                      <p key={idx} className={`text-gray-600 ${idx === info.details.length - 1 ? 'text-sm font-medium text-red-600' : ''}`}>
-                        {detail}
-                      </p>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -315,25 +290,7 @@ export default function ContactPageRedesigned() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="budget" className="block text-sm font-semibold text-gray-900 mb-2">
-                      Budget Range
-                    </label>
-                    <select
-                      id="budget"
-                      name="budget"
-                      value={formData.budget}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all duration-200 text-gray-900 bg-white"
-                    >
-                      <option value="">Select budget range</option>
-                      <option value="under-1lakh">Under ₹1 Lakh</option>
-                      <option value="1-3lakh">₹1-3 Lakhs</option>
-                      <option value="3-5lakh">₹3-5 Lakhs</option>
-                      <option value="5-10lakh">₹5-10 Lakhs</option>
-                      <option value="above-10lakh">Above ₹10 Lakhs</option>
-                    </select>
-                  </div>
+                
                   
                   <div>
                     <label htmlFor="location" className="block text-sm font-semibold text-gray-900 mb-2">
@@ -412,7 +369,7 @@ export default function ContactPageRedesigned() {
                       </svg>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900">14+ Years Experience</h4>
+                      <h4 className="font-semibold text-gray-900">19+ Years Experience</h4>
                       <p className="text-gray-600 text-sm">Proven track record of successful events</p>
                     </div>
                   </div>
@@ -429,17 +386,7 @@ export default function ContactPageRedesigned() {
                     </div>
                   </div>
                   
-                  <div className="flex items-start space-x-3">
-                    <div className="flex-shrink-0 w-6 h-6 bg-red-600 rounded-full flex items-center justify-center mt-1">
-                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900">24/7 Support</h4>
-                      <p className="text-gray-600 text-sm">Always available for your event needs</p>
-                    </div>
-                  </div>
+                
                   
                   <div className="flex items-start space-x-3">
                     <div className="flex-shrink-0 w-6 h-6 bg-red-600 rounded-full flex items-center justify-center mt-1">
@@ -495,7 +442,156 @@ export default function ContactPageRedesigned() {
       </section>
 
 
-      {/* FAQ Section */}
+      
+{/* Map Section */}
+<section className="py-20 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-12">
+      <h2 className="text-4xl font-bold text-gray-900 mb-6 font-serif">Visit Our Office</h2>
+      <p className="text-xl text-gray-600">
+        Located in the heart of Kozhikode, we&apos;re easily accessible for consultations and meetings
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="lg:col-span-2">
+        {/* Google Maps Integration */}
+        <div className="w-full h-96 bg-white rounded-3xl shadow-lg overflow-hidden">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125388.77326!2d75.7057239!3d11.2636548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65949675490cb%3A0x48c6813c6991851c!2sV%20Panoli%20Road%2C%20opposite%20Eurokids%20Play%20School%2C%20Kozhikode%2C%20Kerala%20673004!5e0!3m2!1sen!2sin!4v1692123456789!5m2!1sen!2sin"
+            width="100%" 
+            height="100%" 
+            style={{ border: 0 }}
+            // allowFullScreen="" 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Office Location - V Panoli Road, Kozhikode"
+          />
+        </div>
+        
+        {/* Location Details Card */}
+        <div className="mt-6 bg-white rounded-3xl shadow-lg p-6">
+          <div className="flex items-start space-x-4">
+            <div className="flex-shrink-0">
+              <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <div className="flex-1">
+              <h3 className="text-lg font-semibold text-gray-900">Our Address</h3>
+              <p className="text-gray-600 mt-1">V Panoli Road, opposite Eurokids Play School</p>
+              <p className="text-gray-600">Kozhikode, Kerala 673004</p>
+              <div className="mt-4 flex flex-col sm:flex-row gap-3">
+                <a 
+                  href="https://www.google.com/maps/dir//V+Panoli+Road,+opposite+Eurokids+Play+School,+Kozhikode,+Kerala+673004/@11.2636548,75.7057239,31150m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x3ba65949675490cb:0x48c6813c6991851c!2m2!1d75.7881258!2d11.2636662?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-4 py-2 bg-primary-600 text-white text-sm font-medium rounded-lg hover:bg-primary-700 transition-colors"
+                >
+                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-1.447-.894L15 4m0 13V4m-6 3l6-3" />
+                  </svg>
+                  Get Directions
+                </a>
+                <button 
+                  onClick={() => {
+                    const address = "V Panoli Road, opposite Eurokids Play School, Kozhikode, Kerala 673004";
+                    navigator.clipboard.writeText(address).then(() => {
+                      // You can add a toast notification here
+                      alert('Address copied to clipboard!');
+                    });
+                  }}
+                  className="inline-flex items-center justify-center px-4 py-2 bg-gray-100 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-200 transition-colors"
+                >
+                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                  Copy Address
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="space-y-6">
+        {/* <div className="bg-white rounded-3xl p-6 shadow-lg">
+          <h3 className="text-xl font-bold text-gray-900 mb-4">Office Hours</h3>
+          <div className="space-y-2 text-gray-600">
+            <div className="flex justify-between">
+              <span>Monday - Friday</span>
+              <span>9:00 AM - 8:00 PM</span>
+            </div>
+            <div className="flex justify-between">
+              <span>Saturday</span>
+              <span>9:00 AM - 8:00 PM</span>
+            </div>
+            <div className="flex justify-between">
+              <span>Sunday</span>
+              <span>10:00 AM - 6:00 PM</span>
+            </div>
+          </div>
+        </div> */}
+
+        <div className="bg-white rounded-3xl p-6 shadow-lg">
+          <h3 className="text-xl font-bold text-gray-900 mb-4">Directions</h3>
+          <p className="text-gray-600 text-sm leading-relaxed mb-4">
+            We&apos;re located on V Panoli Road in Kozhikode, easily accessible by public transport and with convenient parking available nearby.
+          </p>
+          <a
+            href="https://www.google.com/maps/dir//V+Panoli+Road,+opposite+Eurokids+Play+School,+Kozhikode,+Kerala+673004/@11.2636548,75.7057239,31150m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x3ba65949675490cb:0x48c6813c6991851c!2m2!1d75.7881258!2d11.2636662?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full bg-primary-600 text-white py-3 rounded-lg hover:bg-primary-700 transition-colors font-medium text-center"
+          >
+            Get Directions
+          </a>
+        </div>
+
+        <div className="bg-white rounded-3xl p-6 shadow-lg">
+          <h3 className="text-xl font-bold text-gray-900 mb-4">Schedule a Visit</h3>
+          <p className="text-gray-600 text-sm leading-relaxed mb-4">
+            Want to visit our office? Schedule an appointment to discuss your event plans in person.
+          </p>
+          <Link
+            href="/contact"
+            className="block w-full bg-gray-100 text-gray-900 py-3 rounded-lg hover:bg-gray-200 transition-colors font-medium text-center"
+          >
+            Book Appointment
+          </Link>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-primary-600">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-white mb-6 font-serif">
+            Let&apos;s Make Your Event Unforgettable
+          </h2>
+          <p className="text-xl text-primary-100 mb-8">
+            Ready to start planning? Our team is excited to hear about your vision and bring it to life.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+919876543210"
+              className="bg-white text-primary-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium text-lg"
+            >
+              Call Now: +91 98765 43210
+            </a>
+            <Link
+              href="/portfolio"
+              className="border-2 border-white text-white hover:bg-white hover:text-primary-600 px-8 py-4 rounded-lg transition-colors font-medium text-lg"
+            >
+              View Our Portfolio
+            </Link>
+          </div>
+        </div>
+      </section>
+{/* FAQ Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -534,104 +630,6 @@ export default function ContactPageRedesigned() {
           </div>
         </div>
       </section>
-
-      {/* Map Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6 font-serif">Visit Our Office</h2>
-            <p className="text-xl text-gray-600">
-              Located in the heart of Kochi, we&apos;re easily accessible for consultations and meetings
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="lg:col-span-2">
-              {/* Placeholder for Google Maps */}
-              <div className="w-full h-96 bg-gray-200 rounded-3xl flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <svg className="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  <p className="text-lg font-medium">Google Maps Integration</p>
-                  <p className="text-sm">Interactive map will be embedded here</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-6">
-              <div className="bg-white rounded-3xl p-6 shadow-lg">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Office Hours</h3>
-                <div className="space-y-2 text-gray-600">
-                  <div className="flex justify-between">
-                    <span>Monday - Friday</span>
-                    <span>9:00 AM - 8:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Saturday</span>
-                    <span>9:00 AM - 8:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Sunday</span>
-                    <span>10:00 AM - 6:00 PM</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-3xl p-6 shadow-lg">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Directions</h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  We&apos;re located in the prime business district of Kochi, easily accessible by public transport and with ample parking available.
-                </p>
-                <button className="w-full bg-primary-600 text-white py-3 rounded-lg hover:bg-primary-700 transition-colors font-medium">
-                  Get Directions
-                </button>
-              </div>
-
-              <div className="bg-white rounded-3xl p-6 shadow-lg">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Schedule a Visit</h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  Want to visit our office? Schedule an appointment to discuss your event plans in person.
-                </p>
-                <Link
-                  href="/contact"
-                  className="block w-full bg-gray-100 text-gray-900 py-3 rounded-lg hover:bg-gray-200 transition-colors font-medium text-center"
-                >
-                  Book Appointment
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-primary-600">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-white mb-6 font-serif">
-            Let&apos;s Make Your Event Unforgettable
-          </h2>
-          <p className="text-xl text-primary-100 mb-8">
-            Ready to start planning? Our team is excited to hear about your vision and bring it to life.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+919876543210"
-              className="bg-white text-primary-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium text-lg"
-            >
-              Call Now: +91 98765 43210
-            </a>
-            <Link
-              href="/portfolio"
-              className="border-2 border-white text-white hover:bg-white hover:text-primary-600 px-8 py-4 rounded-lg transition-colors font-medium text-lg"
-            >
-              View Our Portfolio
-            </Link>
-          </div>
-        </div>
-      </section>
-
       <Footer />
     </div>
   );

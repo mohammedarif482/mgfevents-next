@@ -28,7 +28,6 @@ const services = [
       'Timeline Coordination',
       'Vendor Management'
     ],
-    price: 'Starting from ₹2 Lakhs',
     color: 'from-pink-500 to-rose-600'
   },
   {
@@ -46,7 +45,6 @@ const services = [
       'Exhibition Management',
       'Networking Events'
     ],
-    price: 'Starting from ₹1.5 Lakhs',
     color: 'from-blue-500 to-indigo-600'
   },
   {
@@ -64,7 +62,6 @@ const services = [
       'Props & Furniture Rental',
       'Custom Installations'
     ],
-    price: 'Starting from ₹50,000',
     color: 'from-purple-500 to-violet-600'
   },
   {
@@ -82,7 +79,6 @@ const services = [
       'Custom Menu Creation',
       'Professional Service Staff'
     ],
-    price: 'Starting from ₹800 per person',
     color: 'from-orange-500 to-red-600'
   },
   {
@@ -100,7 +96,6 @@ const services = [
       'Digital Gallery Delivery',
       'Professional Editing'
     ],
-    price: 'Starting from ₹75,000',
     color: 'from-green-500 to-emerald-600'
   },
   {
@@ -118,7 +113,6 @@ const services = [
       'Timeline Management',
       'On-site Coordination'
     ],
-    price: 'Consultation fees apply',
     color: 'from-teal-500 to-cyan-600'
   },
 ];
@@ -129,12 +123,24 @@ export default function ServicesPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-12 bg-gradient-to-br from-primary-600 to-primary-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 font-serif">
+<section className="pt-24 pb-12 bg-gradient-to-br from-primary-600 to-primary-800 relative overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/DSC05422%20copy.jpg')"
+          }}
+        />
+        
+        {/* Black Overlay */}
+        <div className="absolute inset-0 bg-black/20"></div>
+        
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 font-against">
             Our Services
           </h1>
-          <p className="text-xl text-primary-100 max-w-3xl mx-auto">
+          <p className="text-xl text-white/90 max-w-3xl mx-auto">
             Comprehensive event management services tailored to make your special moments unforgettable
           </p>
         </div>
@@ -146,8 +152,13 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {services.map((service, _index) => (
               <div key={service.id} className="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
-                {/* Header */}
-                <div className={`h-32 bg-gradient-to-r ${service.color} flex items-center justify-center`}>
+                 {/* Header */}
+                <div 
+                  className="h-32 flex items-center justify-center"
+                  style={{ 
+                    backgroundColor: _index % 3 === 0 ? '#1DACE4' : _index % 3 === 1 ? '#59AE97' : '#E55E27'
+                  }}
+                >
                   <h2 className="text-3xl font-bold text-white text-center">{service.title}</h2>
                 </div>
                 
@@ -173,7 +184,6 @@ export default function ServicesPage() {
                   {/* Price */}
                   <div className="flex items-center justify-between">
                     <div className="text-2xl font-bold text-primary-600">
-                      {service.price}
                     </div>
                     <Link
                       href="/contact"

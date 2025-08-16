@@ -173,7 +173,7 @@ export default function PortfolioPageRedesigned() {
       <Header />
       
       {/* Hero Section - Gestalt Style */}
-      <section className="pt-24 pb-12 bg-gradient-to-br from-red-600 to-red-800 relative overflow-hidden">
+    <section className="pt-24 pb-12 bg-gradient-to-br from-red-600 to-red-800 relative overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -187,7 +187,7 @@ export default function PortfolioPageRedesigned() {
         
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 font-against">
             Our Portfolio
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
