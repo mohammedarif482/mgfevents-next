@@ -19,97 +19,287 @@ const portfolioItems = [
     id: 1,
     title: 'Priya & Arjun Kerala Wedding',
     category: 'weddings',
-    image: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&h=1200&fit=crop&crop=faces',
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/portfolio/1.jpg',
     location: 'Backwater Resort, Kumarakom',
     date: 'March 2024',
     description: 'A magical waterside wedding celebrating love with traditional Kerala customs and modern elegance. The ceremony featured traditional Kerala music, dance performances, and stunning backwater views.',
     client: 'Priya & Arjun',
-    gallery: ['/images/gallery-1.jpg', '/images/gallery-2.jpg', '/images/gallery-3.jpg'],
     height: 'h-80'
   },
   {
     id: 2,
-    title: 'TechCorp Annual Summit',
-    category: 'corporate',
-    image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=1200&fit=crop&crop=faces',
-    location: 'Crowne Plaza, Kochi',
-    date: 'February 2024',
-    description: 'A three-day technology conference with 500+ attendees, featuring keynote speakers, networking sessions, and interactive workshops that brought together industry leaders.',
-    client: 'TechCorp India',
-    gallery: ['/images/gallery-4.jpg', '/images/gallery-5.jpg', '/images/gallery-6.jpg'],
-    height: 'h-96'
+    title: 'Floral Decoration Showcase',
+    category: 'decorations',
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/portfolio/2.jpeg',
+    location: 'Taj Malabar, Kochi',
+    date: 'April 2024',
+    description: 'Breathtaking floral arrangements and creative venue decorations that transformed the ambience into a dreamy paradise.',
+    client: 'Ananya & Karthik',
+    height: 'h-92'
   },
   {
     id: 3,
-    title: 'Golden Anniversary Celebration',
-    category: 'celebrations',
-    image: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&h=1200&fit=crop&crop=faces',
-    location: 'Heritage Villa, Munnar',
-    date: 'January 2024',
-    description: 'A heartwarming 50th anniversary celebration in the scenic hills of Munnar with family and friends. The event included a renewal of vows ceremony and traditional entertainment.',
-    client: 'The Menon Family',
-    gallery: ['/images/gallery-7.jpg', '/images/gallery-8.jpg', '/images/gallery-9.jpg'],
-    height: 'h-72'
+    title: 'Stage & Theme Decor Setup',
+    category: 'decorations',
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/portfolio/3.png',
+    location: 'Lulu Convention Centre, Thrissur',
+    date: 'March 2024',
+    description: 'Modern stage setups and immersive theme design with elegant lighting and creative backdrops.',
+    client: 'Corporate Excellence Awards',
+    height: 'h-84'
   },
   {
     id: 4,
     title: 'Meera & Vishnu Palace Wedding',
     category: 'weddings',
-    image: 'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=800&h=1200&fit=crop&crop=faces',
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/portfolio/4.png',
     location: 'Bolgatty Palace, Kochi',
     date: 'December 2023',
     description: 'An elegant palace wedding blending traditional Kerala customs with contemporary style and luxury. The venue was decorated with jasmine flowers and traditional Kerala lamps.',
     client: 'Meera & Vishnu',
-    gallery: ['/images/gallery-10.jpg', '/images/gallery-11.jpg', '/images/gallery-12.jpg'],
     height: 'h-88'
   },
   {
     id: 5,
     title: 'Product Launch Gala',
     category: 'corporate',
-    image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=1200&fit=crop&crop=faces',
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/portfolio/5.png',
     location: 'Le Meridien, Kochi',
     date: 'November 2023',
-    description: 'Innovative product launch event with interactive displays, live demonstrations, and networking opportunities. The event successfully introduced the new product line to key stakeholders.',
+    description: 'Innovative product launch event with interactive displays, live demonstrations, and networking opportunities.',
     client: 'InnovateTech Solutions',
-    gallery: ['/images/gallery-13.jpg', '/images/gallery-14.jpg', '/images/gallery-15.jpg'],
     height: 'h-84'
   },
   {
     id: 6,
-    title: 'Birthday Extravaganza',
-    category: 'celebrations',
-    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=1200&fit=crop&crop=faces',
-    location: 'Ramada Resort, Kochi',
-    date: 'October 2023',
-    description: 'A magical themed birthday party that brought childhood dreams to life with creative decorations, interactive games, and entertainment that delighted guests of all ages.',
-    client: 'The Sharma Family',
-    gallery: ['/images/gallery-16.jpg', '/images/gallery-17.jpg', '/images/gallery-18.jpg'],
-    height: 'h-76'
+    title: 'TechCorp Annual Summit',
+    category: 'corporate',
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/portfolio/6.png',
+    location: 'Crowne Plaza, Kochi',
+    date: 'February 2024',
+    description: 'A three-day technology conference with 500+ attendees, featuring keynote speakers, networking sessions, and interactive workshops.',
+    client: 'TechCorp India',
+    height: 'h-96'
   },
   {
     id: 7,
-    title: 'Floral Paradise Wedding Decor',
-    category: 'decorations',
-    image: 'https://images.unsplash.com/photo-1519167758481-83f29d8ae8e4?w=800&h=1200&fit=crop&crop=faces',
-    location: 'Taj Malabar, Kochi',
-    date: 'September 2023',
-    description: 'Breathtaking floral arrangements and lighting design that transformed the venue into a paradise. The decor featured exotic flowers, ambient lighting, and elegant centerpieces.',
-    client: 'Ananya & Karthik',
-    gallery: ['/images/gallery-19.jpg', '/images/gallery-20.jpg', '/images/gallery-21.jpg'],
-    height: 'h-92'
+    title: 'Investor Meet 2024',
+    category: 'corporate',
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/portfolio/7.png',
+    location: 'Grand Hyatt, Kochi',
+    date: 'May 2024',
+    description: 'Annual investor meeting with professional stage design, interactive sessions, and impactful presentations.',
+    client: 'Visionary Holdings',
+    height: 'h-80'
   },
   {
     id: 8,
     title: 'Corporate Award Ceremony',
     category: 'corporate',
-    image: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&h=1200&fit=crop&crop=faces',
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/portfolio/8.png',
     location: 'Grand Hyatt, Kochi',
     date: 'August 2023',
-    description: 'Prestigious award ceremony celebrating excellence with elegant staging and professional presentation. The event recognized outstanding achievements across various categories.',
+    description: 'Prestigious award ceremony celebrating excellence with elegant staging and professional presentation.',
     client: 'Excellence Awards 2023',
-    gallery: ['/images/gallery-22.jpg', '/images/gallery-23.jpg', '/images/gallery-24.jpg'],
     height: 'h-80'
+  },
+  {
+    id: 9,
+    title: 'CEO Farewell Celebration',
+    category: 'celebrations',
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/portfolio/9.png',
+    location: 'Taj Green Cove, Kovalam',
+    date: 'July 2023',
+    description: 'A heartfelt farewell party with cultural performances, speeches, and celebrations honoring leadership.',
+    client: 'GlobalTech Pvt Ltd',
+    height: 'h-72'
+  },
+  {
+    id: 10,
+    title: 'Startup Networking Night',
+    category: 'corporate',
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/portfolio/10.png',
+    location: 'Infopark, Kochi',
+    date: 'June 2023',
+    description: 'Interactive networking event for startup founders and investors with live pitches and panel discussions.',
+    client: 'Startup Kerala',
+    height: 'h-76'
+  },
+  {
+    id: 11,
+    title: 'Luxury Wedding Decor',
+    category: 'decorations',
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/portfolio/11.jpg',
+    location: 'Lake Palace, Alleppey',
+    date: 'May 2023',
+    description: 'Elegant floral setups with golden accents and royal Kerala-inspired decor themes.',
+    client: 'Ramesh & Anitha',
+    height: 'h-88'
+  },
+  {
+    id: 12,
+    title: 'Traditional Mandap Setup',
+    category: 'decorations',
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/portfolio/12.jpg',
+    location: 'Heritage Grounds, Kochi',
+    date: 'April 2023',
+    description: 'Classic mandap designs with jasmine garlands and intricate traditional elements.',
+    client: 'Eventia Weddings',
+    height: 'h-92'
+  },
+  {
+    id: 13,
+    title: 'Stage Lighting & Decor',
+    category: 'decorations',
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/portfolio/13.jpg',
+    location: 'CIAL Convention Centre, Kochi',
+    date: 'March 2023',
+    description: 'Dynamic lighting with premium stage backdrops and flower installations.',
+    client: 'Kerala Fashion Week',
+    height: 'h-84'
+  },
+  {
+    id: 14,
+    title: 'Festive Hall Decoration',
+    category: 'decorations',
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/portfolio/14.jpg',
+    location: 'Ramada Resort, Kochi',
+    date: 'February 2023',
+    description: 'Festival-inspired hall decoration with vibrant flowers, colorful drapes, and lanterns.',
+    client: 'Cultural Fest 2023',
+    height: 'h-76'
+  },
+  {
+    id: 15,
+    title: 'Theme Party Decor',
+    category: 'decorations',
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/portfolio/15.jpg',
+    location: 'Holiday Inn, Kochi',
+    date: 'January 2023',
+    description: 'Creative theme-based decorations with custom props, centerpieces, and lighting.',
+    client: 'The Thomas Family',
+    height: 'h-72'
+  },
+  {
+    id: 16,
+    title: 'Birthday Extravaganza',
+    category: 'celebrations',
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/portfolio/16.jpg',
+    location: 'Ramada Resort, Kochi',
+    date: 'October 2023',
+    description: 'A magical themed birthday party that brought childhood dreams to life with creative decorations, interactive games, and entertainment that delighted guests of all ages.',
+    client: 'The Sharma Family',
+    height: 'h-76'
+  },
+  {
+    id: 17,
+    title: 'Golden Anniversary Celebration',
+    category: 'celebrations',
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/portfolio/17.jpg',
+    location: 'Heritage Villa, Munnar',
+    date: 'January 2024',
+    description: 'A heartwarming 50th anniversary celebration in the scenic hills of Munnar with family and friends.',
+    client: 'The Menon Family',
+    height: 'h-72'
+  },
+  {
+    id: 18,
+    title: 'Family Reunion Party',
+    category: 'celebrations',
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/portfolio/18.jpg',
+    location: 'Bekal Beach Resort, Kasargod',
+    date: 'September 2023',
+    description: 'A vibrant family reunion with cultural programs, beachside games, and entertainment.',
+    client: 'The Nair Family',
+    height: 'h-80'
+  },
+  {
+    id: 19,
+    title: 'Intimate House Wedding',
+    category: 'weddings',
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/portfolio/19.JPG',
+    location: 'Private Villa, Kochi',
+    date: 'August 2023',
+    description: 'A cozy home wedding with traditional rituals and a warm family atmosphere.',
+    client: 'Rahul & Neha',
+    height: 'h-84'
+  },
+  {
+    id: 20,
+    title: 'Destination Wedding in Wayanad',
+    category: 'weddings',
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/portfolio/20.JPG',
+    location: 'Wayanad Resort, Kerala',
+    date: 'July 2023',
+    description: 'A grand destination wedding surrounded by misty mountains and lush greenery.',
+    client: 'Aditya & Sneha',
+    height: 'h-92'
+  },
+  {
+    id: 21,
+    title: 'Engagement Celebration',
+    category: 'celebrations',
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/portfolio/21.JPG',
+    location: 'Casino Hotel, Kochi',
+    date: 'June 2023',
+    description: 'An elegant engagement ceremony with floral themes and a cozy family gathering.',
+    client: 'Akash & Meera',
+    height: 'h-80'
+  },
+  {
+    id: 22,
+    title: 'Luxury Reception Decor',
+    category: 'decorations',
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/portfolio/22.jpg',
+    location: 'Le Meridien, Kochi',
+    date: 'May 2023',
+    description: 'Opulent reception hall decor with chandeliers, floral installations, and ambient lighting.',
+    client: 'Elite Weddings',
+    height: 'h-92'
+  },
+  {
+    id: 23,
+    title: 'Naming Ceremony Celebration',
+    category: 'celebrations',
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/portfolio/23.jpg',
+    location: 'Private Hall, Thrissur',
+    date: 'April 2023',
+    description: 'A beautiful naming ceremony with pastel decor, family traditions, and blessings.',
+    client: 'The Iyer Family',
+    height: 'h-72'
+  },
+  {
+    id: 24,
+    title: 'Housewarming Party',
+    category: 'celebrations',
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/portfolio/24.jpg',
+    location: 'Kochi',
+    date: 'March 2023',
+    description: 'Warm housewarming celebration with friends, food, and laughter.',
+    client: 'The George Family',
+    height: 'h-76'
+  },
+  {
+    id: 25,
+    title: 'Farewell Get-Together',
+    category: 'celebrations',
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/portfolio/25.jpg',
+    location: 'Trivandrum Club',
+    date: 'February 2023',
+    description: 'A memorable farewell party with live music, fun games, and emotional goodbyes.',
+    client: 'The Alumni Group',
+    height: 'h-80'
+  },
+  {
+    id: 26,
+    title: 'Graduation Celebration',
+    category: 'celebrations',
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/portfolio/26.jpg',
+    location: 'Kochi',
+    date: 'January 2023',
+    description: 'Joyful graduation party celebrating achievements with friends and family.',
+    client: 'Class of 2023',
+    height: 'h-84'
   }
 ];
 
@@ -178,7 +368,7 @@ export default function PortfolioPageRedesigned() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/WBN11%201.png')"
+            backgroundImage: "url('https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/WBN4.jpg')"
           }}
         />
         {/* Black Overlay */}
@@ -204,9 +394,9 @@ export default function PortfolioPageRedesigned() {
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
                 className={`px-6 py-3 rounded-2xl font-medium transition-all duration-300 text-sm md:text-base ${
-                  activeCategory === category.id
-                    ? 'bg-red-600 text-white shadow-lg transform scale-105'
-                    : 'bg-gray-50 text-gray-700 hover:bg-red-50 hover:text-red-600 shadow-md hover:shadow-lg'
+activeCategory === category.id
+  ? 'bg-[#E55E27] text-white shadow-lg transform scale-105'
+  : 'bg-gray-50 text-gray-700 hover:bg-[#E55E27]/10 hover:text-[#E55E27] shadow-md hover:shadow-lg'
                 }`}
               >
                 {category.name}
@@ -236,20 +426,20 @@ export default function PortfolioPageRedesigned() {
                 <div className={`relative ${item.height} overflow-hidden`}>
                   <img
                     src={item.image}
-                    alt={item.title}
+                    // alt={item.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   
                   {/* Category Badge */}
-                  <div className="absolute top-4 left-4 z-20">
+                  {/* <div className="absolute top-4 left-4 z-20">
                     <span className="bg-white/90 backdrop-blur-sm text-gray-800 px-3 py-1.5 rounded-full text-xs font-semibold capitalize shadow-lg">
                       {item.category}
                     </span>
-                  </div>
+                  </div> */}
 
                   {/* Bottom Overlay with Text */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-6">
-                    <h3 className="text-white text-lg font-bold mb-2 leading-tight">
+                  {/* <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-6"> */}
+                    {/* <h3 className="text-white text-lg font-bold mb-2 leading-tight">
                       {item.title}
                     </h3>
                     <p className="text-white/90 text-sm mb-2">
@@ -258,9 +448,9 @@ export default function PortfolioPageRedesigned() {
                     <p className="text-white/80 text-sm leading-relaxed mb-3 line-clamp-2">
                       {item.description}
                     </p>
-                    
+                     */}
                     {/* Client and Date */}
-                    <div className="flex items-center justify-between text-xs text-white/70">
+                    {/* <div className="flex items-center justify-between text-xs text-white/70">
                       <div className="flex items-center">
                         <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -268,8 +458,8 @@ export default function PortfolioPageRedesigned() {
                         {item.client}
                       </div>
                       <span className="text-white/80 font-medium">{item.date}</span>
-                    </div>
-                  </div>
+                    </div> */}
+                  {/* </div> */}
 
                   {/* Hover Overlay with CTA */}
                   <div 
@@ -288,108 +478,113 @@ export default function PortfolioPageRedesigned() {
         </div>
       </section>
 
-      {/* Full Screen Modal */}
+
+  {/* Full Screen Modal */}
       {selectedItem && currentItem && (
-        <div className="fixed inset-0 bg-black z-50">
-          {/* Full Screen Image */}
-          <img
-            src={currentItem.image}
-            alt={currentItem.title}
-            className="w-full h-full object-cover"
-          />
-
-          {/* Close Button */}
-          <button
-            onClick={closeModal}
-            className="absolute top-6 right-6 z-60 w-12 h-12 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-
-          {/* Previous Button */}
-          <button
-            onClick={goToPrevious}
-            className="absolute left-6 top-1/2 transform -translate-y-1/2 z-60 w-12 h-12 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-
-          {/* Next Button */}
-          <button
-            onClick={goToNext}
-            className="absolute right-6 top-1/2 transform -translate-y-1/2 z-60 w-12 h-12 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-
-          {/* Details Overlay - Bottom */}
-          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent p-8">
-            <div className="max-w-4xl mx-auto text-white">
-              {/* Category Badge */}
-              <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-red-600 text-white mb-4">
-                {currentItem.category.charAt(0).toUpperCase() + currentItem.category.slice(1)}
-              </div>
-
-              {/* Title */}
-              <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-4">
-                {currentItem.title}
-              </h2>
-
-              {/* Location, Date, and Client */}
-              <div className="flex flex-wrap items-center gap-6 text-gray-300 mb-4">
-                <div className="flex items-center">
-                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  {currentItem.location}
-                </div>
-                <div className="flex items-center">
-                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                  {currentItem.date}
-                </div>
-                <div className="flex items-center">
-                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                  {currentItem.client}
-                </div>
-              </div>
-
-              {/* Description */}
-              <p className="text-lg leading-relaxed text-gray-200 mb-6">
-                {currentItem.description}
-              </p>
-
-              {/* CTA Button */}
-              <Link href="/contact" onClick={closeModal}>
-                <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-2xl font-semibold transition-colors">
-                  Plan Similar Event
-                </button>
-              </Link>
+        <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-4">
+          <div className="relative w-full h-full max-w-7xl max-h-full bg-black rounded-lg overflow-hidden">
+            
+            {/* Main Image */}
+            <div className="w-full h-full flex items-center justify-center">
+              <img
+                src={currentItem.image}
+                // alt={currentItem.title}
+                className="max-w-full max-h-full object-contain"
+              />
             </div>
-          </div>
 
-          {/* Image Counter */}
-          <div className="absolute bottom-6 right-6 bg-black/50 backdrop-blur-sm rounded-full px-3 py-1 text-white/90 text-sm">
-            {currentIndex + 1} / {filteredItems.length}
+            {/* Close Button */}
+            <button
+              onClick={closeModal}
+              className="absolute top-4 right-4 sm:top-6 sm:right-6 z-60 w-10 h-10 sm:w-12 sm:h-12 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors"
+            >
+              <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            {/* Previous Button */}
+            <button
+              onClick={goToPrevious}
+              className="absolute left-2 sm:left-6 top-1/2 transform -translate-y-1/2 z-60 w-12 h-12 sm:w-14 sm:h-14 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors touch-manipulation"
+            >
+              <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+
+            {/* Next Button */}
+            <button
+              onClick={goToNext}
+              className="absolute right-2 sm:right-6 top-1/2 transform -translate-y-1/2 z-60 w-12 h-12 sm:w-14 sm:h-14 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors touch-manipulation"
+            >
+              <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+
+            {/* Details Overlay - Bottom */}
+            {/* <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent p-4 sm:p-8">
+              <div className="max-w-4xl mx-auto text-white"> */}
+                {/* Category Badge */}
+                {/* <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-red-600 text-white mb-2 sm:mb-4">
+                  {currentItem.category.charAt(0).toUpperCase() + currentItem.category.slice(1)}
+                </div> */}
+
+                {/* Title */}
+                {/* <h2 className="text-xl sm:text-3xl md:text-4xl font-bold leading-tight mb-2 sm:mb-4">
+                  {currentItem.title}
+                </h2> */}
+
+                {/* Location, Date, and Client */}
+                {/* <div className="flex flex-wrap items-center gap-2 sm:gap-6 text-gray-300 mb-2 sm:mb-4 text-sm sm:text-base">
+                  <div className="flex items-center">
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    {currentItem.location}
+                  </div>
+                  <div className="flex items-center">
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    {currentItem.date}
+                  </div>
+                  <div className="flex items-center">
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                    {currentItem.client}
+                  </div>
+                </div>
+
+                {/* Description */}
+                {/* <p className="text-sm sm:text-lg leading-relaxed text-gray-200 mb-4 sm:mb-6">
+                  {currentItem.description}
+                </p> */} 
+
+                {/* CTA Button */}
+                {/* <Link href="/contact" onClick={closeModal}>
+                  <button className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-2xl font-semibold transition-colors text-sm sm:text-base">
+                    Plan Similar Event
+                  </button>
+                </Link>
+              </div>
+            </div> */}
+
+            {/* Image Counter */}
+            <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 bg-black/50 backdrop-blur-sm rounded-full px-2 py-1 sm:px-3 sm:py-1 text-white/90 text-xs sm:text-sm">
+              {currentIndex + 1} / {filteredItems.length}
+            </div>
           </div>
         </div>
       )}
-
       {/* CTA Section - Gestalt Style */}
-      <section className="py-20 bg-white">
+    <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto text-center px-6">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-         It’s Time to Write Your Next Chapter of Memories.
+         It's Time to Write Your Next Chapter of Memories.
           </h2>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
             Let&apos;s discuss your vision and create an unforgettable experience that will be remembered for years to come.
@@ -397,20 +592,25 @@ export default function PortfolioPageRedesigned() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-red-600 text-white px-8 py-4 rounded-2xl hover:bg-red-700 transition-colors font-semibold text-lg"
+              className="text-white px-8 py-4 rounded-2xl hover:opacity-90 transition-colors font-semibold text-lg"
+              style={{ backgroundColor: '#E55E27' }}
             >
               Start Planning Your Event
             </Link>
             <Link
               href="/services"
-              className="border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white px-8 py-4 rounded-2xl transition-colors font-semibold text-lg"
+              className="border-2 px-8 py-4 rounded-2xl transition-colors font-semibold text-lg hover:text-white"
+              style={{ 
+                borderColor: '#E55E27', 
+                color: '#E55E27' 
+              }}
+
             >
               Explore Our Services
             </Link>
           </div>
         </div>
       </section>
-
       <Footer/>
     </div>
   );

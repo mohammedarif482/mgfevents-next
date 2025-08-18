@@ -161,7 +161,7 @@ export default function ServicesRedesigned() {
         "Centerpieces",
         "Custom Arrangements"
       ],
-      backgroundImage: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800&h=600&fit=crop&crop=center"
+      backgroundImage: "https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/DSC05553%20copy.jpg"
     },
     {
       title: "Corporate Events",

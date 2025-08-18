@@ -82,7 +82,7 @@ export default function AboutPageRedesigned() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/WBN1167.png')"
+            backgroundImage: "url('https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/IMG_5677.JPG')"
           }}
         />
         
@@ -152,102 +152,7 @@ export default function AboutPageRedesigned() {
         </div>
       </section>
 
-      {/* Timeline Section - Gestalt Style */}
-      {/* <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800 mb-4">
-              OUR JOURNEY
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Milestones & Memories</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Key milestones that have shaped MGF Events into what we are today
-            </p>
-          </div>
-
-          <div className="relative max-w-4xl mx-auto">
-         
-            <div className="absolute left-1/2 transform -translate-x-0.5 h-full w-1 bg-red-200 hidden md:block"></div>
-            
-            <div className="space-y-12">
-              {milestones.map((milestone, index) => (
-                <div key={index} className={`flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} flex-col md:flex-row`}>
-                  <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12 md:text-left'} mb-8 md:mb-0`}>
-                    <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group">
-                      <div className="text-2xl font-bold text-red-600 mb-3 group-hover:text-red-700 transition-colors">{milestone.year}</div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-3">{milestone.event}</h3>
-                      <p className="text-gray-600 leading-relaxed">{milestone.description}</p>
-                    </div>
-                  </div>
-                  
-    
-                  <div className="relative z-10 hidden md:block">
-                    <div className="w-6 h-6 bg-red-600 rounded-full border-4 border-white shadow-lg"></div>
-                  </div>
-                  
-                  <div className="w-full md:w-1/2"></div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section> */}
-
-      {/* Team Section - Gestalt Style */}
-      {/* <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800 mb-4">
-              OUR TEAM
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Meet the Dream Team</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              The passionate professionals who bring magic to every event
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member) => (
-              <div
-                key={member.id}
-                className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2 cursor-pointer"
-                onClick={() => setActiveTeamMember(member)}
-              > */}
-                {/* Image Container */}
-                {/* <div className="relative h-72 overflow-hidden rounded-t-3xl">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  
-                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <button className="bg-white text-gray-900 px-6 py-3 rounded-2xl font-semibold hover:bg-gray-100 transition-colors transform hover:scale-105 shadow-xl">
-                        Read More
-                      </button>
-                    </div>
-                  </div> */}
-
-                  {/* Bottom Overlay with Text */}
-                  {/* <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-6">
-                    <h3 className="text-white text-xl font-bold mb-1 leading-tight">{member.name}</h3>
-                    <p className="text-white/90 text-sm">{member.role}</p>
-                  </div>
-                </div>
-
-                <div className="p-6">
-                  <p className="text-gray-600 leading-relaxed line-clamp-3">
-                    {member.bio}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-      {/* Team Section - Gestalt Style */}
-<section className="py-20 bg-gray-50">
+{/* <section className="py-20 bg-gray-50">
   <div className="max-w-7xl mx-auto px-6">
     <div className="text-center mb-16">
       <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800 mb-4">
@@ -265,9 +170,9 @@ export default function AboutPageRedesigned() {
           key={member.id}
           className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2 cursor-pointer"
           onClick={() => setActiveTeamMember(member)}
-        >
+        > */}
           {/* Image Container */}
-          <div className="relative h-72 overflow-hidden rounded-t-3xl">
+          {/* <div className="relative h-72 overflow-hidden rounded-t-3xl">
             <img
               src={member.image}
               alt={member.name}
@@ -280,10 +185,10 @@ export default function AboutPageRedesigned() {
                   Read More
                 </button>
               </div>
-            </div>
+            </div> */}
 
             {/* Bottom Overlay with Text */}
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-6">
+            {/* <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-6">
               <h3 className="text-white text-xl font-bold mb-1 leading-tight">{member.name}</h3>
               <p className="text-white/90 text-sm">{member.role}</p>
             </div>
@@ -298,7 +203,7 @@ export default function AboutPageRedesigned() {
       ))}
     </div>
   </div>
-</section>
+</section> */}
 
      
       {/* CTA Section - Gestalt Style */}
