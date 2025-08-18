@@ -1,7 +1,7 @@
 /* components/services-redesigned.tsx */
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 // Individual Service Card Component
 const ServiceCard = ({ 
@@ -18,7 +18,7 @@ const ServiceCard = ({
   buttonText?: string;
 }) => {
   return (
-    <div className="relative rounded-3xl overflow-hidden shadow-xl group hover:shadow-2xl transition-all duration-300" style={{ height: '32rem' }}>
+    <div className="relative rounded-3xl overflow-hidden shadow-xl group hover:shadow-2xl transition-all duration-300 flex-shrink-0 w-full md:w-auto" style={{ height: '32rem' }}>
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105"
@@ -111,8 +111,13 @@ const ServiceCard = ({
   );
 };
 
-// Main Services Component (Replaces ServicesRedesigned)
+// Main Services Component with Mobile Carousel
 export default function ServicesRedesigned() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const touchStartX = useRef<number>(0);
+  const touchEndX = useRef<number>(0);
+
   const services = [
     {
       title: "Wedding Planning",
@@ -162,13 +167,10 @@ export default function ServicesRedesigned() {
       title: "Corporate Events",
       description: "From impactful conferences to grand celebrations, our corporate event services are designed to strengthen your brand presence and create lasting impressions with seamless execution.",
       features: [
-       "Venue Management",
-
-"Stage & Theme Design",
-
-"End-to-End Coordination",
-
-"Schedule & Program Management"
+        "Venue Management",
+        "Stage & Theme Design",
+        "End-to-End Coordination",
+        "Schedule & Program Management"
       ],
       backgroundImage: "https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/IMG_4909.JPG"
     },
@@ -184,6 +186,55 @@ export default function ServicesRedesigned() {
       backgroundImage: "https://images.unsplash.com/photo-1555244162-803834f70033?w=800&h=600&fit=crop&crop=center"
     }
   ];
+
+  // Auto-scroll functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % services.length);
+    }, 4000); // Auto-scroll every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [services.length]);
+
+  // Scroll to current slide
+  useEffect(() => {
+    if (scrollContainerRef.current) {
+      const container = scrollContainerRef.current;
+      const slideWidth = container.offsetWidth;
+      container.scrollTo({
+        left: currentSlide * slideWidth,
+        behavior: 'smooth'
+      });
+    }
+  }, [currentSlide]);
+
+  // Touch handlers for swipe gestures
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+    
+    const distance = touchStartX.current - touchEndX.current;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe && currentSlide < services.length - 1) {
+      setCurrentSlide(currentSlide + 1);
+    }
+    if (isRightSwipe && currentSlide > 0) {
+      setCurrentSlide(currentSlide - 1);
+    }
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
 
   return (
     <section className="py-20 bg-gray-50" id="services">
@@ -201,8 +252,74 @@ export default function ServicesRedesigned() {
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Mobile Carousel (visible on mobile and tablet) */}
+        <div className="block lg:hidden">
+          <div className="relative">
+            {/* Carousel Container */}
+            <div 
+              ref={scrollContainerRef}
+              className="flex overflow-x-hidden scroll-smooth"
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
+              {services.map((service, index) => (
+                <div key={index} className="w-full flex-shrink-0 px-2">
+                  <ServiceCard
+                    title={service.title}
+                    description={service.description}
+                    features={service.features}
+                    backgroundImage={service.backgroundImage}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Navigation and Indicators Container */}
+          <div className="flex items-center justify-center mt-6 space-x-4">
+            {/* Previous Arrow */}
+            <button 
+              onClick={() => goToSlide(currentSlide > 0 ? currentSlide - 1 : services.length - 1)}
+              className="bg-white/20 backdrop-blur-md rounded-full p-2 text-gray-600 hover:bg-white/40 hover:text-gray-800 transition-all duration-200 shadow-lg"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+
+            {/* Indicators */}
+            <div className="flex space-x-2">
+              {services.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`transition-all duration-300 rounded-full ${
+                    index === currentSlide 
+                      ? 'w-8 h-2' 
+                      : 'w-2 h-2 hover:bg-gray-400'
+                  }`}
+                  style={{
+                    backgroundColor: index === currentSlide ? '#E55E27' : '#d1d5db'
+                  }}
+                />
+              ))}
+            </div>
+
+            {/* Next Arrow */}
+            <button 
+              onClick={() => goToSlide(currentSlide < services.length - 1 ? currentSlide + 1 : 0)}
+              className="bg-white/20 backdrop-blur-md rounded-full p-2 text-gray-600 hover:bg-white/40 hover:text-gray-800 transition-all duration-200 shadow-lg"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {/* Desktop Grid (hidden on mobile) */}
+        <div className="hidden lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <ServiceCard
               key={index}
@@ -216,37 +333,37 @@ export default function ServicesRedesigned() {
 
         {/* CTA Section */}
         <div className="text-center mt-16">           
- <div className="bg-white rounded-3xl p-8 shadow-xl max-w-4xl mx-auto">             
-   <h3 className="text-2xl font-bold text-gray-900 mb-4 ">               
-     Ready to Start Planning Your Perfect Event?             
-   </h3>             
-   <p className="text-gray-600 mb-6">               
-     Let our expert team help you create unforgettable memories. Contact us for a free consultation.             
-   </p>             
-   <div className="flex flex-col sm:flex-row gap-4 justify-center">               
-     <button className="text-white px-8 py-3 rounded-2xl font-semibold transition-colors duration-200" 
-             style={{backgroundColor: '#E55E27'}} 
-             onMouseEnter={(e) => (e.target as HTMLButtonElement).style.backgroundColor = '#d14d1f'}
-             onMouseLeave={(e) => (e.target as HTMLButtonElement).style.backgroundColor = '#E55E27'}>                 
-       Get Free Consultation               
-     </button>               
-     <button className="border-2 px-8 py-3 rounded-2xl font-semibold transition-all duration-200" 
-             style={{borderColor: '#E55E27', color: '#E55E27'}}
-             onMouseEnter={(e) => {
-               const target = e.target as HTMLButtonElement;
-               target.style.backgroundColor = '#E55E27';
-               target.style.color = 'white';
-             }}
-             onMouseLeave={(e) => {
-               const target = e.target as HTMLButtonElement;
-               target.style.backgroundColor = 'transparent';
-               target.style.color = '#E55E27';
-             }}>                 
-       View  Portfolio               
-     </button>             
-   </div>           
- </div>         
-</div>
+          <div className="bg-white rounded-3xl p-8 shadow-xl max-w-4xl mx-auto">             
+            <h3 className="text-2xl font-bold text-gray-900 mb-4 ">               
+              Ready to Start Planning Your Perfect Event?             
+            </h3>             
+            <p className="text-gray-600 mb-6">               
+              Let our expert team help you create unforgettable memories. Contact us for a free consultation.             
+            </p>             
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">               
+              <button className="text-white px-8 py-3 rounded-2xl font-semibold transition-colors duration-200" 
+                      style={{backgroundColor: '#E55E27'}} 
+                      onMouseEnter={(e) => (e.target as HTMLButtonElement).style.backgroundColor = '#d14d1f'}
+                      onMouseLeave={(e) => (e.target as HTMLButtonElement).style.backgroundColor = '#E55E27'}>                 
+                Get Free Consultation               
+              </button>               
+              <button className="border-2 px-8 py-3 rounded-2xl font-semibold transition-all duration-200" 
+                      style={{borderColor: '#E55E27', color: '#E55E27'}}
+                      onMouseEnter={(e) => {
+                        const target = e.target as HTMLButtonElement;
+                        target.style.backgroundColor = '#E55E27';
+                        target.style.color = 'white';
+                      }}
+                      onMouseLeave={(e) => {
+                        const target = e.target as HTMLButtonElement;
+                        target.style.backgroundColor = 'transparent';
+                        target.style.color = '#E55E27';
+                      }}>                 
+                View Portfolio               
+              </button>             
+            </div>           
+          </div>         
+        </div>
       </div>
     </section>
   );

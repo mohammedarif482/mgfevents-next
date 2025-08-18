@@ -111,7 +111,7 @@ export default function Testimonials() {
           <div className="inline-block px-4 py-2 bg-primary-100 text-primary-600 rounded-full text-sm font-medium mb-4">
             TESTIMONIALS
           </div>
-<h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 font-serif font-against">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-against">
   Customer stories,<br />
   <div className="mt-4">
     <span className="text-primary-600">unforgettable memories</span>
@@ -187,39 +187,38 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* Testimonial Navigation */}
-        <div 
-          className={`flex flex-wrap justify-center gap-4 mb-16 transition-all duration-1000 delay-400 ${
-            inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
-        >
-          {testimonials.map((testimonial, index) => (
-            <button
-              key={testimonial.id}
-              onClick={() => goToTestimonial(index)}
-              className={`group relative p-1 rounded-full transition-all duration-300 ${
-                index === currentTestimonial 
-                  ? 'ring-4 ring-primary-600 ring-opacity-30 scale-110' 
-                  : 'hover:ring-2 hover:ring-primary-300 hover:scale-105'
-              }`}
-            >
-              <div className="w-16 h-16 rounded-full overflow-hidden shadow-lg">
-                {/* Placeholder with gradient */}
-                <div className={`w-full h-full bg-gradient-to-br ${testimonial.bgColor} flex items-center justify-center transition-transform duration-300 group-hover:scale-110`}>
-                  <span className="text-white text-lg font-bold">
-                    {testimonial.name.charAt(0)}
-                  </span>
-                </div>
-              </div>
-              
-              {/* Tooltip */}
-              <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-gray-900 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-                {testimonial.name}
-              </div>
-            </button>
-          ))}
+       {/* Testimonial Navigation */}
+<div
+  className={`flex flex-wrap justify-center gap-4 mb-16 transition-all duration-1000 delay-400 ${
+    inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+  }`}
+>
+  {testimonials.map((testimonial, index) => (
+    <button
+      key={testimonial.id}
+      onClick={() => goToTestimonial(index)}
+      className={`group relative p-1 rounded-full transition-all duration-300 ${
+        index === currentTestimonial
+          ? 'ring-4 ring-[#E55E27] ring-opacity-30 scale-110'
+          : 'hover:ring-2 hover:ring-[#E55E27] hover:ring-opacity-50 hover:scale-105'
+      }`}
+    >
+      <div className="w-16 h-16 rounded-full overflow-hidden shadow-lg">
+        {/* Black background with orange text */}
+        <div className="w-full h-full bg-white flex items-center justify-center transition-transform duration-300 group-hover:scale-110 ">
+          <span className="text-[#E55E27] text-lg font-bold">
+            {testimonial.name.charAt(0)}
+          </span>
         </div>
-
+      </div>
+      
+      {/* Tooltip */}
+      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-gray-900 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+        {testimonial.name}
+      </div>
+    </button>
+  ))}
+</div>
         {/* Stats Section */}
         <div 
           className={`grid grid-cols-2 md:grid-cols-4 gap-8 text-center transition-all duration-1000 delay-600 ${
@@ -227,11 +226,11 @@ export default function Testimonials() {
           }`}
         >
           <div className="bg-gray-50 rounded-2xl p-6">
-            <div className="text-4xl font-bold text-primary-600 mb-2">98%</div>
+            <div className="text-4xl font-bold text-primary-600 mb-2">100%</div>
             <div className="text-gray-600 font-medium">Client Satisfaction</div>
           </div>
           <div className="bg-gray-50 rounded-2xl p-6">
-            <div className="text-4xl font-bold text-primary-600 mb-2">500+</div>
+            <div className="text-4xl font-bold text-primary-600 mb-2">1000+</div>
             <div className="text-gray-600 font-medium">Events Completed</div>
           </div>
           <div className="bg-gray-50 rounded-2xl p-6">
