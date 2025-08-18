@@ -400,7 +400,7 @@ activeCategory === category.id
                 }`}
               >
                 {category.name}
-                <span className="ml-2 text-xs opacity-75">({category.count})</span>
+                {/* <span className="ml-2 text-xs opacity-75">({category.count})</span> */}
               </button>
             ))}
           </div>
