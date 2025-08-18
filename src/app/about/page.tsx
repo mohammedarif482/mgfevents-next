@@ -246,6 +246,59 @@ export default function AboutPageRedesigned() {
           </div>
         </div>
       </section> */}
+      {/* Team Section - Gestalt Style */}
+<section className="py-20 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-6">
+    <div className="text-center mb-16">
+      <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800 mb-4">
+        OUR TEAM
+      </div>
+      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Meet the Dream Team</h2>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        The passionate professionals who bring magic to every event
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {teamMembers.map((member) => (
+        <div
+          key={member.id}
+          className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2 cursor-pointer"
+          onClick={() => setActiveTeamMember(member)}
+        >
+          {/* Image Container */}
+          <div className="relative h-72 overflow-hidden rounded-t-3xl">
+            <img
+              src={member.image}
+              alt={member.name}
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            
+            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <button className="bg-white text-gray-900 px-6 py-3 rounded-2xl font-semibold hover:bg-gray-100 transition-colors transform hover:scale-105 shadow-xl">
+                  Read More
+                </button>
+              </div>
+            </div>
+
+            {/* Bottom Overlay with Text */}
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-6">
+              <h3 className="text-white text-xl font-bold mb-1 leading-tight">{member.name}</h3>
+              <p className="text-white/90 text-sm">{member.role}</p>
+            </div>
+          </div>
+
+          <div className="p-6">
+            <p className="text-gray-600 leading-relaxed line-clamp-3">
+              {member.bio}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
      
       {/* CTA Section - Gestalt Style */}

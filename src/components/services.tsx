@@ -215,24 +215,38 @@ export default function ServicesRedesigned() {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center mt-16">
-          <div className="bg-white rounded-3xl p-8 shadow-xl max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 ">
-              Ready to Start Planning Your Perfect Event?
-            </h3>
-            <p className="text-gray-600 mb-6">
-              Let our expert team help you create unforgettable memories. Contact us for a free consultation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-2xl font-semibold transition-colors duration-200">
-                Get Free Consultation
-              </button>
-              <button className="border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white px-8 py-3 rounded-2xl font-semibold transition-all duration-200">
-                View Portfolio
-              </button>
-            </div>
-          </div>
-        </div>
+        <div className="text-center mt-16">           
+ <div className="bg-white rounded-3xl p-8 shadow-xl max-w-4xl mx-auto">             
+   <h3 className="text-2xl font-bold text-gray-900 mb-4 ">               
+     Ready to Start Planning Your Perfect Event?             
+   </h3>             
+   <p className="text-gray-600 mb-6">               
+     Let our expert team help you create unforgettable memories. Contact us for a free consultation.             
+   </p>             
+   <div className="flex flex-col sm:flex-row gap-4 justify-center">               
+     <button className="text-white px-8 py-3 rounded-2xl font-semibold transition-colors duration-200" 
+             style={{backgroundColor: '#E55E27'}} 
+             onMouseEnter={(e) => (e.target as HTMLButtonElement).style.backgroundColor = '#d14d1f'}
+             onMouseLeave={(e) => (e.target as HTMLButtonElement).style.backgroundColor = '#E55E27'}>                 
+       Get Free Consultation               
+     </button>               
+     <button className="border-2 px-8 py-3 rounded-2xl font-semibold transition-all duration-200" 
+             style={{borderColor: '#E55E27', color: '#E55E27'}}
+             onMouseEnter={(e) => {
+               const target = e.target as HTMLButtonElement;
+               target.style.backgroundColor = '#E55E27';
+               target.style.color = 'white';
+             }}
+             onMouseLeave={(e) => {
+               const target = e.target as HTMLButtonElement;
+               target.style.backgroundColor = 'transparent';
+               target.style.color = '#E55E27';
+             }}>                 
+       View  Portfolio               
+     </button>             
+   </div>           
+ </div>         
+</div>
       </div>
     </section>
   );
