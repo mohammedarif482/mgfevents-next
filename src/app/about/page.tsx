@@ -62,7 +62,7 @@ const values = [
 
 const milestones = [
   { year: '2010', event: 'MGF Events Founded', description: 'Started with a vision to redefine event management in Kerala' },
-  { year: '2015', event: '500+ Events Completed', description: 'Reached our first major milestone of successful events' },
+  { year: '2015', event: '1000+ Events Completed', description: 'Reached our first major milestone of successful events' },
   { year: '2018', event: 'Corporate Division Launch', description: 'Expanded services to include corporate events and conferences' },
   { year: '2020', event: 'Digital Transformation', description: 'Adapted to hybrid and virtual events during challenging times' },
   { year: '2023', event: '1000+ Happy Clients', description: 'Celebrated over 1000 successful events and satisfied clients' },
@@ -82,7 +82,7 @@ export default function AboutPageRedesigned() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1511578314322-379afb476865?w=1920&h=1080&fit=crop&crop=center')"
+            backgroundImage: "url('https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/WBN1167.png')"
           }}
         />
         

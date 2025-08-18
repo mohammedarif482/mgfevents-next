@@ -111,10 +111,12 @@ export default function Testimonials() {
           <div className="inline-block px-4 py-2 bg-primary-100 text-primary-600 rounded-full text-sm font-medium mb-4">
             TESTIMONIALS
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 font-serif font-against">
-            Customer stories,<br />
-            <span className="text-primary-600">unforgettable memories</span>
-          </h2>
+<h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 font-serif font-against">
+  Customer stories,<br />
+  <div className="mt-4">
+    <span className="text-primary-600">unforgettable memories</span>
+  </div>
+</h2>
         </div>``
 
         {/* Main Testimonial Display */}

@@ -178,10 +178,9 @@ export default function PortfolioPageRedesigned() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1519167758481-83f29d8ae8e4?w=1920&h=1080&fit=crop&crop=center')"
+            backgroundImage: "url('https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/WBN11%201.png')"
           }}
         />
-        
         {/* Black Overlay */}
         <div className="absolute inset-0 bg-black/20"></div>
         
@@ -390,7 +389,7 @@ export default function PortfolioPageRedesigned() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto text-center px-6">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Ready to Create Your Own Success Story?
+         It’s Time to Write Your Next Chapter of Memories.
           </h2>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
             Let&apos;s discuss your vision and create an unforgettable experience that will be remembered for years to come.

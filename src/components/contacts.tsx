@@ -264,7 +264,7 @@ export default function ContactRedesigned() {
                   </div>
                 </div>
                 <p className="text-white/90 leading-relaxed">
-                  Backed by Experience from 2,500+ Weddings. Our expert team is here to guide you through every step of your special day.
+                  Backed by Experience from 2,500+ Events. Our expert team is here to guide you through every step of your special day.
                 </p>
               </div>
 
