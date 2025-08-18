@@ -19,7 +19,7 @@ const heroSlides = [
     subtitle: 'Professional event management that elevates your business gatherings',
     cta: 'Explore Corporate Services',
     href: '/services/corporate-events',
-    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/ARK_0105.JPG'
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/DSCF5848.JPG'
   },
   {
     id: 3,

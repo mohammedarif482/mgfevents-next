@@ -300,7 +300,61 @@ const portfolioItems = [
     description: 'Joyful graduation party celebrating achievements with friends and family.',
     client: 'Class of 2023',
     height: 'h-84'
-  }
+  },
+  {
+    id: 27,
+    title: 'Corporate Award Ceremony',
+    category: 'corporate',
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/ARK_2159.JPG',
+    location: 'Grand Hyatt, Kochi',
+    date: 'August 2023',
+    description: 'Prestigious award ceremony celebrating excellence with elegant staging and professional presentation.',
+    client: 'Excellence Awards 2023',
+    height: 'h-80'
+  }, 
+   {
+    id: 28,
+    title: 'Corporate Award Ceremony',
+    category: 'corporate',
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/ARK_3871.JPG',
+    location: 'Grand Hyatt, Kochi',
+    date: 'August 2023',
+    description: 'Prestigious award ceremony celebrating excellence with elegant staging and professional presentation.',
+    client: 'Excellence Awards 2023',
+    height: 'h-80'
+  },  {
+    id: 29,
+    title: 'Corporate Award Ceremony',
+    category: 'corporate',
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/ARK_4117.JPG',
+    location: 'Grand Hyatt, Kochi',
+    date: 'August 2023',
+    description: 'Prestigious award ceremony celebrating excellence with elegant staging and professional presentation.',
+    client: 'Excellence Awards 2023',
+    height: 'h-80'
+  },
+   {
+    id: 30,
+    title: 'Corporate Award Ceremony',
+    category: 'corporate',
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/WhatsApp%20Image%202025-02-01%20at%2022.52.29%20%281%29.jpeg',
+    location: 'Grand Hyatt, Kochi',
+    date: 'August 2023',
+    description: 'Prestigious award ceremony celebrating excellence with elegant staging and professional presentation.',
+    client: 'Excellence Awards 2023',
+    height: 'h-80'
+  },  {
+    id: 31,
+    title: 'Corporate Award Ceremony',
+    category: 'corporate',
+    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/WhatsApp%20Image%202025-02-01%20at%2023.10.03%20%281%29.jpeg',
+    location: 'Grand Hyatt, Kochi',
+    date: 'August 2023',
+    description: 'Prestigious award ceremony celebrating excellence with elegant staging and professional presentation.',
+    client: 'Excellence Awards 2023',
+    height: 'h-80'
+  },
+  
 ];
 
 export default function PortfolioPageRedesigned() {
