@@ -72,31 +72,31 @@ export default function HeroRedesigned() {
       <div className="absolute inset-0 bg-black/20 z-10"></div>
 
       {/* Content - Gestalt Style */}
-      <div className="relative z-20 text-center text-white max-w-5xl mx-auto px-6">
+      <div className="relative z-20 text-center text-white max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className={`transition-all duration-1000 transform ${
             isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
           }`}
         >
-          {/* Main Heading */}
-{/* Option 6: Custom with specific pixel values */}
-<h1 className="font-bold mb-6 leading-tight font-against" style={{fontSize: '4rem'}}>
-  {heroSlides[currentSlide].title}
-</h1>
-          {/* Subtitle */}
-          <p className="text-xl md:text-2xl mb-12 font-light leading-relaxed max-w-4xl mx-auto opacity-95">
+          {/* Main Heading - Responsive font sizing */}
+          <h1 className="font-bold mb-4 sm:mb-6 leading-tight font-against text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl px-2">
+            {heroSlides[currentSlide].title}
+          </h1>
+          
+          {/* Subtitle - Responsive font sizing */}
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 sm:mb-12 font-light leading-relaxed max-w-4xl mx-auto opacity-95 px-2">
             {heroSlides[currentSlide].subtitle}
           </p>
 
-          {/* CTA Buttons - Gestalt Style */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+          {/* CTA Buttons - Responsive sizing */}
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-12 sm:mb-16 px-2">
             <Link
               href={heroSlides[currentSlide].href}
-              className="group bg-white text-gray-900 px-8 py-4 rounded-2xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-white/20 inline-flex items-center"
+              className="group bg-white text-gray-900 px-6 sm:px-8 py-3 sm:py-4 rounded-2xl text-base sm:text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-white/20 inline-flex items-center w-full sm:w-auto justify-center"
             >
               <span className="mr-2">{heroSlides[currentSlide].cta}</span>
               <svg 
-                className="w-5 h-5 transition-transform group-hover:translate-x-1"
+                className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1"
                 fill="none" 
                 stroke="currentColor" 
                 viewBox="0 0 24 24"
@@ -106,57 +106,47 @@ export default function HeroRedesigned() {
             </Link>
             <Link
               href="/portfolio"
-              className="border-2 border-white/80 text-white hover:bg-white/10 px-8 py-4 rounded-2xl text-lg font-medium transition-all duration-300 backdrop-blur-sm"
+              className="border-2 border-white/80 text-white hover:bg-white/10 px-6 sm:px-8 py-3 sm:py-4 rounded-2xl text-base sm:text-lg font-medium transition-all duration-300 backdrop-blur-sm w-full sm:w-auto text-center"
             >
               View Our Work
             </Link>
           </div>
 
-          {/* Stats Row - Gestalt Style */}
-          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
-            <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-6">
-              <div className="text-3xl md:text-4xl font-bold mb-2 text-white">1000+</div>
-              <div className="text-sm md:text-base uppercase tracking-wide opacity-90 font-medium">Events Planned</div>
+          {/* Stats Row - Responsive grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-2xl mx-auto px-2">
+            <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 text-white">1000+</div>
+              <div className="text-xs sm:text-sm md:text-base uppercase tracking-wide opacity-90 font-medium leading-tight">Events Planned</div>
             </div>
-            <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-6">
-              <div className="text-3xl md:text-4xl font-bold mb-2 text-white">19+</div>
-              <div className="text-sm md:text-base uppercase tracking-wide opacity-90 font-medium">Years Experience</div>
+            <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 text-white">19+</div>
+              <div className="text-xs sm:text-sm md:text-base uppercase tracking-wide opacity-90 font-medium leading-tight">Years Experience</div>
             </div>
-            <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-6">
-              <div className="text-3xl md:text-4xl font-bold mb-2 text-white">100%</div>
-              <div className="text-sm md:text-base uppercase tracking-wide opacity-90 font-medium">Client Satisfaction</div>
+            <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2 text-white">100%</div>
+              <div className="text-xs sm:text-sm md:text-base uppercase tracking-wide opacity-90 font-medium leading-tight">Client Satisfaction</div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Slide Indicators - Gestalt Style */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30">
+      {/* Slide Indicators - Responsive positioning */}
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-30">
         <div className="flex space-x-2">
           {heroSlides.map((_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`h-3 rounded-full transition-all duration-300 ${
+              className={`h-2 sm:h-3 rounded-full transition-all duration-300 ${
                 index === currentSlide
-                  ? 'bg-white w-8'
-                  : 'bg-white/50 hover:bg-white/75 w-3'
+                  ? 'bg-white w-6 sm:w-8'
+                  : 'bg-white/50 hover:bg-white/75 w-2 sm:w-3'
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
         </div>
       </div>
-
-      {/* Scroll Indicator - Gestalt Style */}
-      {/* <div className="absolute bottom-8 right-8 z-30 animate-bounce">
-        <div className="flex flex-col items-center text-white/80 bg-white/10 backdrop-blur-sm rounded-2xl p-4">
-          <span className="text-xs mb-2 font-medium">Scroll</span>
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
-        </div>
-      </div> */}
     </section>
   );
 }

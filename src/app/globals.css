@@ -136,6 +136,53 @@ select:focus-visible {
   .heading-responsive {
     font-size: clamp(2rem, 6vw, 4rem);
   }
+  
+  /* Prevent text overflow on mobile */
+  h1, h2, h3, h4, h5, h6 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  /* Ensure proper text wrapping */
+  p, span, div {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  /* Prevent horizontal scrolling */
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Ensure containers don't overflow */
+  .container, .max-w-7xl, .max-w-5xl, .max-w-4xl, .max-w-3xl, .max-w-2xl {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  /* Smaller text sizes for very small screens */
+  .text-xs {
+    font-size: 0.75rem;
+  }
+  
+  .text-sm {
+    font-size: 0.875rem;
+  }
+  
+  .text-base {
+    font-size: 1rem;
+  }
+  
+  /* Ensure buttons don't overflow */
+  button, a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 /* Reduced Motion */
