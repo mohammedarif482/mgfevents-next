@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 // Define the video type
@@ -14,6 +14,12 @@ type Video = {
 export default function Portfolio() {
   const [selectedVideo, setSelectedVideo] = useState<Video | null>(null);
   const [embedError, setEmbedError] = useState<Set<number>>(new Set());
+  const [isManualScrolling, setIsManualScrolling] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState({ row1: 0, row2: 0 });
+  
+  const row1Ref = useRef<HTMLDivElement>(null);
+  const row2Ref = useRef<HTMLDivElement>(null);
+  
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -24,13 +30,13 @@ export default function Portfolio() {
     {
       id: 1,
       thumbnail: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/image00010.jpeg',
-      instagramUrl: 'https://www.instagram.com/reel/DNbQ5PaBQCy/?utm_source=ig_web_copy_link&igsh=MTdjaG53ejBzajNkMw==',
+      instagramUrl: 'https://www.instagram.com/reel/DNbQ5PaBQCy/?utm_source=ig_web_copy_link&igsh=MTdjaG53ejBzajNkMw',
       embedUrl: 'https://www.instagram.com/reel/DNbQ5PaBQCy/embed',
     },
     {
       id: 2,
       thumbnail: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/18.jpg',
-      instagramUrl: 'https://www.instagram.com/reel/DMXrHKkhY3i/?utm_source=ig_web_copy_link&igsh=MXhvc2M5cTV4ZW9pcQ==',
+      instagramUrl: 'https://www.instagram.com/reel/DMXrHKkhY3i/?utm_source=ig_web_copy_link&igsh=MXhvc2M5cTV4ZW9pcQ',
       embedUrl: 'https://www.instagram.com/reel/DMXrHKkhY3i/embed',
     },
     {
@@ -54,7 +60,7 @@ export default function Portfolio() {
     {
       id: 6,
       thumbnail: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/snaplytics.io_instagram_thumbnail%20%283%29.jpg',
-      instagramUrl: 'https://www.instagram.com/reel/DIaC0SDBAti/?utm_source=ig_web_copy_link&igsh=MXZ1YWF6MHE2MDNwag==',
+      instagramUrl: 'https://www.instagram.com/reel/DIaC0SDBAti/?utm_source=ig_web_copy_link&igsh=MXZ1YWF6MHE2MDNwag',
       embedUrl: 'https://www.instagram.com/reel/DIaC0SDBAti/embed',
     },
   ];
@@ -63,7 +69,7 @@ export default function Portfolio() {
     {
       id: 7, // Changed to unique ID
       thumbnail: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/snaplytics.io_instagram_thumbnail%20%282%29.jpg',
-      instagramUrl: 'https://www.instagram.com/reel/DITFW8tBaV2/?utm_source=ig_web_copy_link&igsh=MXRpcXFmN3Z5dG9xeA==',
+      instagramUrl: 'https://www.instagram.com/reel/DITFW8tBaV2/?utm_source=ig_web_copy_link&igsh=MXRpcXFmN3Z5dG9xeA',
       embedUrl: 'https://www.instagram.com/reel/DITFW8tBaV2/embed',
     },
     {
@@ -94,9 +100,33 @@ export default function Portfolio() {
       id: 12, // Changed to unique ID
       thumbnail: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/snaplytics.io_instagram_thumbnail%20%288%29.jpg',
       instagramUrl: 'https://www.instagram.com/reel/DID67u5Crpn/?utm_source=ig_web_copy_link&igsh=ZW92bjZ2bDVkYWRx',
-      embedUrl: 'https://www.instagram.com/reel/DH9044aBpDI/embed',
+      embedUrl: 'https://www.instagram.com/reel/DID67u5Crpn/embed',
     },
   ];
+
+  // Handle manual scroll events
+  const handleScroll = (e: React.WheelEvent, rowType: 'row1' | 'row2') => {
+    e.preventDefault();
+    setIsManualScrolling(true);
+    
+    const scrollAmount = e.deltaY * 0.5; // Adjust scroll sensitivity
+    setScrollPosition(prev => ({
+      ...prev,
+      [rowType]: prev[rowType] + scrollAmount
+    }));
+
+    // Reset manual scrolling after a delay
+    setTimeout(() => setIsManualScrolling(false), 1000);
+  };
+
+  // Handle touch scroll for mobile
+  const handleTouchStart = () => {
+    setIsManualScrolling(true);
+  };
+
+  const handleTouchEnd = () => {
+    setTimeout(() => setIsManualScrolling(false), 1000);
+  };
 
   const openVideo = (video: Video) => {
     setSelectedVideo(video);
@@ -151,8 +181,21 @@ export default function Portfolio() {
         }`}
       >
         {/* First Row - Scrolling Right */}
-        <div className="relative overflow-hidden">
-          <div className="flex gap-6 animate-scroll-right">
+        <div 
+          className="relative overflow-hidden"
+          onWheel={(e) => handleScroll(e, 'row1')}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
+          <div 
+            ref={row1Ref}
+            className={`flex gap-6 transition-transform duration-300 ${
+              isManualScrolling ? 'animate-none' : 'animate-scroll-right'
+            }`}
+            style={{
+              transform: isManualScrolling ? `translateX(${scrollPosition.row1}px)` : undefined
+            }}
+          >
             {firstRowVideos.map((video, index) => (
               <div
                 key={`row1-${video.id}-${index}`}
@@ -181,8 +224,21 @@ export default function Portfolio() {
         </div>
 
         {/* Second Row - Scrolling Left */}
-        <div className="relative overflow-hidden">
-          <div className="flex gap-6 animate-scroll-left">
+        <div 
+          className="relative overflow-hidden"
+          onWheel={(e) => handleScroll(e, 'row2')}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
+          <div 
+            ref={row2Ref}
+            className={`flex gap-6 transition-transform duration-300 ${
+              isManualScrolling ? 'animate-none' : 'animate-scroll-left'
+            }`}
+            style={{
+              transform: isManualScrolling ? `translateX(${scrollPosition.row2}px)` : undefined
+            }}
+          >
             {secondRowVideos.map((video, index) => (
               <div
                 key={`row2-${video.id}-${index}`}
