@@ -35,7 +35,7 @@ export default function Portfolio() {
     },
     {
       id: 2,
-      thumbnail: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/18.jpg',
+      thumbnail: 'https://kwh4x8eqjs8qpzd9.public.blob.vercel-storage.com/snaplytics.io_instagram_thumbnail.jpg',
       instagramUrl: 'https://www.instagram.com/reel/DMXrHKkhY3i/?utm_source=ig_web_copy_link&igsh=MXhvc2M5cTV4ZW9pcQ',
       embedUrl: 'https://www.instagram.com/reel/DMXrHKkhY3i/embed',
     },

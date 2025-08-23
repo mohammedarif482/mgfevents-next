@@ -11,7 +11,7 @@ const heroSlides = [
     subtitle: 'Creating magical moments with traditional Kerala charm and modern elegance',
     cta: 'Plan Your Wedding',
     href: '/services/wedding-planning',
-    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/0029%202%201.png'
+    image: 'https://kwh4x8eqjs8qpzd9.public.blob.vercel-storage.com/0029231.png'
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const heroSlides = [
     subtitle: 'Professional event management that elevates your business gatherings',
     cta: 'Explore Corporate Services',
     href: '/services/corporate-events',
-    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/DSCF5848.JPG'
+    image: 'https://kwh4x8eqjs8qpzd9.public.blob.vercel-storage.com/DSCF5848%201%201.png'
   },
   {
     id: 3,
