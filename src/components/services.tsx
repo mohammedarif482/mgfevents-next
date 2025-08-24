@@ -128,7 +128,7 @@ export default function ServicesRedesigned() {
         "Complete Coordination",
         "Timeline Management"
       ],
-      backgroundImage: "https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/0035%201.png"
+      backgroundImage: "https://kwh4x8eqjs8qpzd9.public.blob.vercel-storage.com/0030%201.png"
     },
     {
       title: "Event Management",
@@ -150,7 +150,7 @@ export default function ServicesRedesigned() {
         "Local Vendor Management",
         "Guest Accommodation"
       ],
-      backgroundImage: "https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/DSC01883%201.png"
+      backgroundImage: "https://kwh4x8eqjs8qpzd9.public.blob.vercel-storage.com/DSC08839copy1.png"
     },
     {
       title: "Event Decor",
@@ -161,7 +161,7 @@ export default function ServicesRedesigned() {
         "Centerpieces",
         "Custom Arrangements"
       ],
-      backgroundImage: "https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/DSC05553%20copy.jpg"
+      backgroundImage: "https://kwh4x8eqjs8qpzd9.public.blob.vercel-storage.com/DSC09028copy1.png"
     },
     {
       title: "Corporate Events",
@@ -172,7 +172,7 @@ export default function ServicesRedesigned() {
         "End-to-End Coordination",
         "Schedule & Program Management"
       ],
-      backgroundImage: "https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/IMG_4909.JPG"
+      backgroundImage: "https://kwh4x8eqjs8qpzd9.public.blob.vercel-storage.com/dwhjd%5D.jpeg"
     },
     {
       title: "Catering Services",

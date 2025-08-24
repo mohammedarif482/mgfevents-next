@@ -186,7 +186,7 @@ export default function ContactPageRedesigned() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1556125574-d7f27ec36a06?w=1920&h=1080&fit=crop&crop=center')"
+            backgroundImage: "url('https://kwh4x8eqjs8qpzd9.public.blob.vercel-storage.com/DSC038361.png')"
           }}
         />
         
@@ -586,10 +586,10 @@ export default function ContactPageRedesigned() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+919876543210"
+              href="tel:+919387039393"
               className="bg-white text-primary-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium text-lg"
             >
-              Call Now: +91 98765 43210
+              Call Now: +91 938 703 9393
             </a>
             <Link
               href="/portfolio"

@@ -128,7 +128,7 @@ export default function ServicesPage() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/DSC05422%20copy.jpg')"
+            backgroundImage: "url('https://kwh4x8eqjs8qpzd9.public.blob.vercel-storage.com/WBN113.png')"
           }}
         />
         

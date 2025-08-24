@@ -27,7 +27,7 @@ const heroSlides = [
     subtitle: 'From birthdays to anniversaries, we make every occasion special',
     cta: 'Celebrate With Us',
     href: '/services',
-    image: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/DSC05448%20copy.jpg'
+    image: 'https://kwh4x8eqjs8qpzd9.public.blob.vercel-storage.com/DSC05477%20copy%201.png'
   },
 ];
 

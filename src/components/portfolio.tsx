@@ -29,7 +29,7 @@ export default function Portfolio() {
   const row1: Video[] = [
     {
       id: 1,
-      thumbnail: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/image00010.jpeg',
+      thumbnail: 'https://kwh4x8eqjs8qpzd9.public.blob.vercel-storage.com/1.jpg',
       instagramUrl: 'https://www.instagram.com/reel/DNbQ5PaBQCy/?utm_source=ig_web_copy_link&igsh=MTdjaG53ejBzajNkMw',
       embedUrl: 'https://www.instagram.com/reel/DNbQ5PaBQCy/embed',
     },
@@ -41,25 +41,25 @@ export default function Portfolio() {
     },
     {
       id: 3,
-      thumbnail: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/WhatsApp%20Image%202025-02-01%20at%2023.10.03%20%281%29.jpeg',
+      thumbnail: 'https://kwh4x8eqjs8qpzd9.public.blob.vercel-storage.com/3.jpg',
       instagramUrl: 'https://www.instagram.com/reel/DMHez5EhklK/?utm_source=ig_web_copy_link&igsh=d3Nqb2FmNmFua2Ri',
       embedUrl: 'https://www.instagram.com/reel/DMHez5EhklK/embed',
     },
     {
       id: 4,
-      thumbnail: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/snaplytics.io_instagram_thumbnail.jpg',
+      thumbnail: 'https://kwh4x8eqjs8qpzd9.public.blob.vercel-storage.com/4.jpg',
       instagramUrl: 'https://www.instagram.com/reel/DIvKPuiIm7L/?utm_source=ig_web_copy_link&igsh=MWQzaWgzdHc2NXd5',
       embedUrl: 'https://www.instagram.com/reel/DIvKPuiIm7L/embed',
     },
     {
       id: 5,
-      thumbnail: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/snaplytics.io_instagram_thumbnail%20%281%29.jpg',
+      thumbnail: 'https://kwh4x8eqjs8qpzd9.public.blob.vercel-storage.com/5.jpg',
       instagramUrl: 'https://www.instagram.com/reel/DIkn2NzhB9i/?utm_source=ig_web_copy_link&igsh=aDhrcW95Z2g5dHNq',
       embedUrl: 'https://www.instagram.com/reel/DIkn2NzhB9i/embed',
     },
     {
       id: 6,
-      thumbnail: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/snaplytics.io_instagram_thumbnail%20%283%29.jpg',
+      thumbnail: 'https://kwh4x8eqjs8qpzd9.public.blob.vercel-storage.com/6.jpg',
       instagramUrl: 'https://www.instagram.com/reel/DIaC0SDBAti/?utm_source=ig_web_copy_link&igsh=MXZ1YWF6MHE2MDNwag',
       embedUrl: 'https://www.instagram.com/reel/DIaC0SDBAti/embed',
     },
@@ -68,37 +68,37 @@ export default function Portfolio() {
   const row2: Video[] = [
     {
       id: 7, // Changed to unique ID
-      thumbnail: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/snaplytics.io_instagram_thumbnail%20%282%29.jpg',
+      thumbnail: 'https://kwh4x8eqjs8qpzd9.public.blob.vercel-storage.com/7.jpg',
       instagramUrl: 'https://www.instagram.com/reel/DITFW8tBaV2/?utm_source=ig_web_copy_link&igsh=MXRpcXFmN3Z5dG9xeA',
       embedUrl: 'https://www.instagram.com/reel/DITFW8tBaV2/embed',
     },
     {
       id: 8, // Changed to unique ID
-      thumbnail: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/snaplytics.io_instagram_thumbnail%20%284%29.jpg',
+      thumbnail: 'https://kwh4x8eqjs8qpzd9.public.blob.vercel-storage.com/8.jpg',
       instagramUrl: 'https://www.instagram.com/reel/DHabCNVCKg5/?utm_source=ig_web_copy_link&igsh=Nmg5b2p3bzk2OHZz',
       embedUrl: 'https://www.instagram.com/reel/DHabCNVCKg5/embed',
     },
     {
       id: 9, // Changed to unique ID
-      thumbnail: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/snaplytics.io_instagram_thumbnail%20%285%29.jpg',
+      thumbnail: 'https://kwh4x8eqjs8qpzd9.public.blob.vercel-storage.com/9.jpg',
       instagramUrl: 'https://www.instagram.com/reel/DHLYe0CidBs/?utm_source=ig_web_copy_link&igsh=dDFxaXdjamE5cTdx',
       embedUrl: 'https://www.instagram.com/reel/DHLYe0CidBs/embed',
     },
     {
       id: 10, // Changed to unique ID
-      thumbnail: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/snaplytics.io_instagram_thumbnail%20%286%29.jpg',
+      thumbnail: 'https://kwh4x8eqjs8qpzd9.public.blob.vercel-storage.com/10.jpg',
       instagramUrl: 'https://www.instagram.com/reel/DD1Q1DCyDnC/?utm_source=ig_web_copy_link&igsh=ZTZocnA1bTlsOTBl',
       embedUrl: 'https://www.instagram.com/reel/DD1Q1DCyDnC/embed',
     },
     {
       id: 11, // Fixed duplicate - unique ID and URL needed
-      thumbnail: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/snaplytics.io_instagram_thumbnail%20%287%29.jpg',
+      thumbnail: 'https://kwh4x8eqjs8qpzd9.public.blob.vercel-storage.com/11.jpg',
       instagramUrl: 'https://www.instagram.com/reel/DH9044aBpDI/?utm_source=ig_web_copy_link&igsh=bTFpcGtnMDBkb2Qy',
       embedUrl: 'https://www.instagram.com/reel/DH9044aBpDI/embed',
     },
     {
       id: 12, // Changed to unique ID
-      thumbnail: 'https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/snaplytics.io_instagram_thumbnail%20%288%29.jpg',
+      thumbnail: 'https://kwh4x8eqjs8qpzd9.public.blob.vercel-storage.com/12.jpg',
       instagramUrl: 'https://www.instagram.com/reel/DID67u5Crpn/?utm_source=ig_web_copy_link&igsh=ZW92bjZ2bDVkYWRx',
       embedUrl: 'https://www.instagram.com/reel/DID67u5Crpn/embed',
     },

@@ -26,6 +26,16 @@ export const metadata: Metadata = {
   authors: [{ name: 'MGF Events' }],
   creator: 'MGF Events',
   
+  // Favicon configuration
+  icons: {
+    icon: [
+      { url: '/assets/images/favicon.png', type: 'image/png' },
+      { url: '/favicon.ico', type: 'image/x-icon' }
+    ],
+    shortcut: '/assets/images/favicon.png',
+    apple: '/assets/images/favicon.png',
+  },
+  
   // Add these PWA and mobile meta tags:
   manifest: '/manifest.json',
   themeColor: '#ec4899',

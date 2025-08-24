@@ -423,7 +423,7 @@ export default function PortfolioPageRedesigned() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('https://jiclyt3rslmxxd7w.public.blob.vercel-storage.com/WBN4.jpg')"
+            backgroundImage: "url('https://kwh4x8eqjs8qpzd9.public.blob.vercel-storage.com/IMG_56771.png')"
           }}
         />
         {/* Black Overlay */}

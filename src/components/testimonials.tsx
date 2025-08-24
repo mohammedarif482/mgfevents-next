@@ -8,49 +8,54 @@ import { useInView } from 'react-intersection-observer';
 const testimonials = [
   {
     id: 1,
-    name: 'Priya Nair',
+    name: 'Sunil Varkey',
     event: 'Wedding Celebration',
-    content: 'Outstanding experience with MGF Events. They are thorough professionals & are sure to make your event memorable for all your guests & peaceful for you!',
+    content: "Best event management team in Calicut. They made sure all our personal requests were addressed on time and helped in making a dream wedding venue. Thank you to Midul, Resmy and the team."
+                                        ,
     rating: 5,
     location: 'Kochi, Kerala',
     image: '/images/testimonial-priya.jpg',
-    bgColor: 'from-pink-500 to-rose-600'
+    bgColor: 'from-orange-500 to-red-600'
   },
   {
     id: 2,
-    name: 'Rajesh Kumar', 
+    name: 'Karthika P', 
     event: 'Corporate Conference',
-    content: 'Incredible attention to detail and flawless execution. MGF Events transformed our annual conference into an unforgettable experience for 500+ attendees.',
+    content: "We had connected with MGF to arrange our engagement ceremony decor at Hotel Marina, Calicut. Their service was reasonably priced and the work was neat and simple. The synthetic flowers were of good quality that they were perfect substitute for natural flowers!!!"
+                                        ,
     rating: 5,
     location: 'Thiruvananthapuram, Kerala',
     image: '/images/testimonial-rajesh.jpg',
-    bgColor: 'from-blue-500 to-indigo-600'
+    bgColor: 'from-orange-500 to-red-600'
   },
   {
     id: 3,
-    name: 'Meera Menon',
+    name: 'Sunena',
     event: 'Golden Anniversary',
-    content: 'The team at MGF Events is simply amazing! They organized our parents\' 50th anniversary with such care and attention. Every moment was magical.',
+    content: "Kudos to the team for pulling off a well coordinated event, that honestly exceeded my expectations. My (then) fiance & I had to virtually plan our wedding and reception to be held at Calicut in May. From day 1, the team has been extremely responsive, supportive and most importantly very calm. In fact, to this day, I have not even met any of the team in person but I'm ever so grateful for having MGF put together this event so beautifully. Highly recommended!!"
+                                        ,
     rating: 5,
     location: 'Munnar, Kerala',
     image: '/images/testimonial-meera.jpg',
-    bgColor: 'from-purple-500 to-violet-600'
+    bgColor: 'from-orange-500 to-red-600'
   },
   {
     id: 4,
-    name: 'Arjun Pillai',
+    name: 'Sreekumar, CEO, VASP Group',
     event: 'Product Launch',
-    content: 'Professional service from start to finish. MGF Events handled our product launch with creativity and precision that impressed all our stakeholders.',
+    content: "We were a bit apprehensive about the conduct the beauty pageant Truly Traditional Miss Malabar taking into account the various factors involved. But MGF surpassed our expectations and delivered on every count. We would recommend them as the best services providers."
+                                        ,
     rating: 5,
     location: 'Kozhikode, Kerala',
     image: '/images/testimonial-arjun.jpg',
-    bgColor: 'from-green-500 to-emerald-600'
+    bgColor: 'from-orange-500 to-red-600'
   },
   {
     id: 5,
-    name: 'Kavya Krishnan',
+    name: 'Dr. Akshay',
     event: 'Birthday Celebration',
-    content: 'From concept to execution, MGF Events delivered beyond our imagination. Our daughter\'s birthday party was a fairy tale come to life!',
+    content: "I would like to Thank Midhul and team for making the wedding reception of my brother and self grand events with superb decor and venue arrangements.  "
+                                        ,
     rating: 5,
     location: 'Kottayam, Kerala',
     image: '/images/testimonial-kavya.jpg',
@@ -148,12 +153,12 @@ export default function Testimonials() {
                   <h4 className="text-2xl font-bold text-gray-900 mb-2">
                     {testimonials[currentTestimonial].name}
                   </h4>
-                  <p className="text-primary-600 font-semibold mb-1">
+                  {/* <p className="text-primary-600 font-semibold mb-1">
                     {testimonials[currentTestimonial].event}
-                  </p>
-                  <p className="text-gray-500 text-sm">
+                  </p> */}
+                  {/* <p className="text-gray-500 text-sm">
                     {testimonials[currentTestimonial].location}
-                  </p>
+                  </p> */}
                 </div>
               </div>
 
